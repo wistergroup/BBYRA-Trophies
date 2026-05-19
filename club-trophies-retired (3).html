@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Retired Trophies | BBYRA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#052058;--navy-dark:#031540;--navy-mid:#0a3580;--gold:#c8902a;--gold-light:#e8b84b;--white:#ffffff;--off-white:#f4f6fa;--gray-light:#e4e9f2;--gray-mid:#a8b6cc;--gray-text:#506080;--text:#1a2540;--font-serif:'Merriweather',Georgia,serif;--font-sans:'Source Sans 3','Segoe UI',sans-serif;--radius:6px;--shadow-md:0 4px 18px rgba(5,32,88,0.12);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font-sans);color:var(--text);background:var(--off-white);font-size:16px;line-height:1.6;}
+    a{color:var(--navy);text-decoration:none;transition:color .2s;}
+    a:hover{color:var(--gold);}
+    /* HERO */
+    .page-hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,var(--navy-mid) 100%);color:var(--white);padding:52px 24px 42px;text-align:center;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse at 15% 60%,rgba(200,144,42,0.13) 0%,transparent 55%),radial-gradient(ellipse at 85% 15%,rgba(255,255,255,0.04) 0%,transparent 50%);pointer-events:none;}
+    .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);}
+    .page-hero-inner{position:relative;max-width:760px;margin:0 auto;}
+    .eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px;}
+    .page-hero h1{font-family:var(--font-serif);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:700;line-height:1.2;margin-bottom:14px;}
+    .page-hero p{font-size:0.97rem;color:rgba(255,255,255,0.78);max-width:600px;margin:0 auto 20px;}
+    .hero-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;}
+    .hero-sub-link{display:inline-block;background:rgba(255,255,255,0.10);border:1.5px solid rgba(200,144,42,0.55);color:var(--gold-light);padding:8px 20px;border-radius:20px;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;transition:background .2s;}
+    .hero-sub-link:hover{background:rgba(200,144,42,0.2);color:var(--gold-light);}
+    /* JUMP NAV */
+    .jump-nav{background:var(--white);border-bottom:2px solid var(--gray-light);padding:12px 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(5,32,88,0.09);}
+    .jump-nav-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:5px 8px;align-items:center;}
+    .jump-label{font-size:0.70rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray-mid);margin-right:4px;white-space:nowrap;}
+    .jump-nav a{font-size:0.78rem;font-weight:600;color:var(--navy);padding:3px 10px;border-radius:20px;border:1.5px solid var(--gray-light);transition:all .18s;white-space:nowrap;}
+    .jump-nav a:hover{background:var(--navy);color:var(--white);border-color:var(--navy);}
+    /* MAIN */
+    .page-main{max-width:1200px;margin:0 auto;padding:36px 24px 80px;}
+    /* CLUB SECTION */
+    .club-section{margin-bottom:48px;background:var(--white);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden;}
+    .club-header{background:linear-gradient(90deg,var(--navy) 0%,var(--navy-mid) 100%);padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .club-header h2{font-family:var(--font-serif);font-size:1.18rem;font-weight:700;color:var(--white);}
+    .club-abbr{font-size:0.70rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);background:rgba(255,255,255,0.08);padding:3px 10px;border-radius:20px;border:1px solid rgba(200,144,42,0.4);white-space:nowrap;}
+    /* TROPHY TABLE */
+    .trophy-table{width:100%;border-collapse:collapse;}
+    .trophy-table thead{background:var(--gray-light);}
+    .trophy-table th{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.10em;color:var(--gray-text);padding:8px 14px 8px 24px;text-align:left;border-bottom:2px solid var(--gray-mid);}
+    .trophy-table th.col-archive{width:90px;text-align:center;}
+    .trophy-table td{padding:10px 14px 10px 24px;vertical-align:middle;font-size:0.87rem;border-bottom:1px solid var(--gray-light);}
+    .trophy-table tr:last-child td{border-bottom:none;}
+    .trophy-table tr:hover td{background:rgba(5,32,88,0.025);}
+    .trophy-name{font-weight:600;color:var(--navy-dark);}
+    .trophy-class{font-size:0.80rem;color:var(--gray-text);margin-top:2px;}
+    .last-winner{font-size:0.82rem;color:var(--text);}
+    .last-winner em{font-style:italic;}
+    .last-winner .club-tag{display:inline-block;font-size:0.68rem;font-weight:700;color:var(--navy);background:var(--off-white);border:1px solid var(--gray-light);padding:1px 6px;border-radius:3px;margin-left:4px;vertical-align:middle;}
+    .archive-link{display:inline-flex;align-items:center;justify-content:center;font-size:0.70rem;font-weight:600;color:var(--navy);border:1.5px solid var(--navy);padding:3px 9px;border-radius:4px;transition:all .18s;}
+    .archive-link:hover{background:var(--navy);color:var(--white);}
+    .no-data{color:var(--gray-mid);font-style:italic;font-size:0.82rem;}
+    /* TROPHY CARDS */
+    .trophy-cards{padding:28px 28px 8px;}
+    .trophy-card{display:flex;gap:28px;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--gray-light);}
+    .trophy-card:last-child{border-bottom:none;margin-bottom:4px;}
+    .trophy-card-photo{flex:0 0 110px;text-align:center;}
+    .trophy-card-photo img{width:100%;max-width:110px;border-radius:var(--radius);box-shadow:0 2px 10px rgba(5,32,88,0.12);border:2px solid var(--gray-light);}
+    .trophy-card-photo .photo-placeholder{width:100px;height:130px;background:var(--off-white);border:2px dashed var(--gray-light);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--gray-mid);}
+    .trophy-card-body{flex:1;min-width:0;}
+    .trophy-card-body h3{font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--navy-dark);margin-bottom:6px;}
+    .trophy-card-body .trophy-meta{font-size:0.74rem;font-weight:700;text-transform:uppercase;letter-spacing:0.10em;color:var(--gold);margin-bottom:10px;}
+    .trophy-card-body .trophy-desc{font-size:0.88rem;color:var(--gray-text);line-height:1.7;margin-bottom:12px;}
+    .trophy-card-body .trophy-desc em{font-style:italic;}
+    .winners-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--navy);margin-bottom:6px;}
+    .winners-list{font-size:0.83rem;color:var(--text);line-height:1.9;column-count:2;column-gap:24px;}
+    .winners-list .no-win{color:var(--gray-mid);font-style:italic;}
+    @media(max-width:600px){.trophy-card{flex-direction:column;}.trophy-card-photo{flex:none;}.winners-list{column-count:1;}}
+    /* FOOTER */
+    .site-footer{background:var(--navy-dark);color:rgba(255,255,255,0.62);padding:30px 24px;text-align:center;font-size:0.81rem;}
+    .site-footer a{color:rgba(255,255,255,0.72);}
+    .site-footer a:hover{color:var(--gold-light);}
+    .site-footer p{margin-bottom:6px;}
+    .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:5px 18px;margin-top:12px;list-style:none;}
+    @media(max-width:600px){.club-header{padding:14px 16px;}.trophy-table th,.trophy-table td{padding-left:14px;}}
+    @media print{.club-section{box-shadow:none;border:1px solid #ccc;page-break-inside:avoid;}}
+  </style>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="eyebrow">Barnegat Bay Yacht Racing Association</p>
+    <h1>Retired Trophies</h1>
+    <p>Historical trophies no longer actively contested, organized by host club. Archive links lead to full winners histories.</p>
+    <div class="hero-links">
+      <a href="club-trophies.html" class="hero-sub-link">&#127942; Host Day Trophies &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<nav class="jump-nav" aria-label="Jump to Club">
+  <div class="jump-nav-inner">
+    <span class="jump-label">Jump to:</span>
+    <a href="#bhyc">Bay Head</a>
+    <a href="#byc">Beachwood</a>
+    <a href="#ihyc">Island Heights</a>
+    <a href="#lyc">Lavallette</a>
+    <a href="#mryc">Metedeconk River</a>
+    <a href="#myc">Mantoloking</a>
+    <a href="#mcyc">Metedeconk</a>
+    <a href="#nbyc">Normandy Beach</a>
+    <a href="#occ">Ocean County</a>
+    <a href="#ogyc">Ocean Gate</a>
+    <a href="#spyc">Seaside Park</a>
+    <a href="#sayc">Shore Acres</a>
+    <a href="#tryc">Toms River</a>
+  </div>
+</nav>
+
+<main class="page-main">
+
+<!-- ══ BAY HEAD YC ══════════════════════════════════════════════════ -->
+<section class="club-section" id="bhyc">
+  <div class="club-header"><h2>Bay Head Yacht Club</h2><span class="club-abbr">BHYC</span></div>
+  <div class="trophy-cards">
+
+    <!-- Lippincott Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Lippincott Trophy</h3>
+        <p class="trophy-meta">Comet Fleet &mdash; Bay Head Yacht Club Host Race</p>
+        <p class="trophy-desc">The Lippincott Trophy was awarded to the winner of the Comet class on Bay Head Yacht Club&rsquo;s BBYRA race day. Records are available from 1959 through 1969.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1959 &mdash; <span class="no-win">Record not available</span><br>
+          1960 &mdash; <span class="no-win">Record not available</span><br>
+          1961 &mdash; <span class="no-win">Record not available</span><br>
+          1962 &mdash; <span class="no-win">Record not available</span><br>
+          1963 &mdash; <span class="no-win">Record not available</span><br>
+          1964 &mdash; <span class="no-win">Record not available</span><br>
+          1965 &mdash; <span class="no-win">Record not available</span><br>
+          1966 &mdash; <span class="no-win">Record not available</span><br>
+          1967 &mdash; <span class="no-win">Record not available</span><br>
+          1968 &mdash; <span class="no-win">Record not available</span><br>
+          1969 &mdash; <span class="no-win">Record not available</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Governor Hoffman Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Governor Hoffman Trophy</h3>
+        <p class="trophy-meta">G Sloop Fleet &mdash; Bay Head Yacht Club Season Series</p>
+        <p class="trophy-desc">A perpetual award presented by H. G. Hoffman, Governor of New Jersey, for the G Sloop season series at Bay Head Yacht Club. The trophy was contested from 1936 through 1949.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1936 &mdash; <em>Ninety Proof</em> G-7 &mdash; Nat Duval, BHYC<br>
+          1937 &mdash; <em>Colleen</em> G-10 &mdash; W. M. Rose, BHYC<br>
+          1938 &mdash; <em>Wa Wa</em> G-4 &mdash; Dane Hahn, BHYC<br>
+          1939 &mdash; <em>Scud</em> G-1 &mdash; Robert Brightman, BHYC<br>
+          1940 &mdash; <em>Gee Whiz</em> G-41 &mdash; Harold W. Brightman, BHYC<br>
+          1941 &mdash; <em>Lost Horizon</em> G-22 &mdash; Philip Cole, BHYC<br>
+          1942 &mdash; <em>Gee Whiz</em> G-41 &mdash; Robert Brightman, BHYC<br>
+          1943 &mdash; <em>Colken III</em> G-10 &mdash; Hildegarde O. Rose, BHYC<br>
+          1944 &mdash; <em>Narf II</em> G-20 &mdash; Robert Snyder, TRYC<br>
+          1945 &mdash; <em>Betsy Ann</em> G-14 &mdash; MYC<br>
+          1946 &mdash; <em>Horizon</em> G-22 &mdash; Taylor W. Cole, BHYC<br>
+          1947 &mdash; <em>Narf II</em> G-20 &mdash; Bob Snyder, TRYC<br>
+          1948 &mdash; <em>Barracuda</em> G-50 &mdash; Martin Ill, IHYC<br>
+          1949 &mdash; <em>Barracuda</em> G-50 &mdash; Martin Ill, IHYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Governor A. Harry Moore Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Governor A. Harry Moore Trophy</h3>
+        <p class="trophy-meta">G Sloop Fleet &mdash; Bay Head Yacht Club Host Race</p>
+        <p class="trophy-desc">The Governor <a href="https://en.wikipedia.org/wiki/A._Harry_Moore" target="_blank" rel="noopener">A. Harry Moore</a> Trophy was awarded to the winner of the G Sloop class on Bay Head Yacht Club&rsquo;s BBYRA race day. Records span 1939 through 1963; the 1939 and 1954 races are documented by newspaper articles in the archive.</p>
+        <p class="winners-label">Winners (selected records)</p>
+        <div class="winners-list">
+          1939 &mdash; <em>Thalia</em> &mdash; Sam Merrick, BHYC<br>
+          1940&ndash;1953 &mdash; <span class="no-win">Records not available</span><br>
+          1954 &mdash; <em>Auraly</em> &mdash; Fred Westin, BHYC<br>
+          1955&ndash;1963 &mdash; <span class="no-win">Records not available</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rose Memorial Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Rose Memorial Trophy</h3>
+        <p class="trophy-meta">G Sloop Fleet &mdash; Bay Head Yacht Club</p>
+        <p class="trophy-desc">The Rose Memorial Trophy was awarded to the winner of the G Sloop class. Records cover 1961 through 1964; specific winner data is not available in the archive.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1961 &mdash; <span class="no-win">Record not available</span><br>
+          1962 &mdash; <span class="no-win">Record not available</span><br>
+          1963 &mdash; <span class="no-win">Record not available</span><br>
+          1964 &mdash; <span class="no-win">Record not available</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barnegat Cup -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/bh_barnegat.jpg" alt="Barnegat Cup"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>Barnegat Cup</h3>
+        <p class="trophy-meta">Lightning Fleet &mdash; Bay Head Yacht Club Host Race</p>
+        <p class="trophy-desc">The Barnegat Cup was donated by John W. &ldquo;Jack&rdquo; Orelup in 1952 as the perpetual trophy for the winner of the Lightning class on Bay Head&rsquo;s BBYRA race day, replacing the earlier California Cup. Named after the original Lightning fleet on Barnegat Bay, Jack Orelup (1897&ndash;1966) was Fleet Captain of BHYC from 1961&ndash;1965, a founding member of Lightning Fleet #3, and a two-time recipient of the BBYRA O.G. Dale Memorial Trophy (1945 and 1965).</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1952 &mdash; <em>Flying Mist</em> &mdash; Jim G. Carson, MCYC<br>
+          1953 &mdash; <em>Sparks</em> &mdash; Jim G. Carson, MCYC<br>
+          1954 &mdash; <em>Whirlwind</em> &mdash; Marge Adams, BHYC<br>
+          1955 &mdash; <em>Vision</em> &mdash; James Wagner, MCYC<br>
+          1956 &mdash; <em>Vagabond</em> &mdash; Bob Adams, BHYC<br>
+          1957 &mdash; <em>Vision</em> &mdash; James Wagner, MCYC<br>
+          1958 &mdash; <em>Trident</em> 6884 &mdash; Jim G. Carson, MCYC<br>
+          1959 &mdash; <em>Trident</em> 6884 &mdash; Jim G. Carson, MCYC<br>
+          1960 &mdash; No Race<br>
+          1961 &mdash; <em>Trident</em> 6884 &mdash; J. G. Carson, MCYC<br>
+          1962 &mdash; <em>Windward II</em> &mdash; Reid Dickerson, IHYC<br>
+          1963 &mdash; <em>Trident II</em> 8484 &mdash; Jim G. Carson, MCYC<br>
+          1964 &mdash; <em>Trident II</em> 8484 &mdash; Jim G. Carson, MCYC<br>
+          1965 &mdash; <em>Vagabond</em> &mdash; Bob Adams, BHYC<br>
+          1966 &mdash; <em>Flying Scud</em> &mdash; Jim G. Carson, MCYC<br>
+          1967 &mdash; <em>Flying Scud</em> &mdash; Jim G. Carson, MCYC<br>
+          1968 &mdash; <em>Plain Jane</em> &mdash; J. S. Orelup, BHYC<br>
+          1969 &mdash; <em>Flying Foam</em> &mdash; Jim Carson, MCYC<br>
+          1970 &mdash; <em>Dow Jones</em> &mdash; J. S. Orelup, BHYC<br>
+          1971 &mdash; <em>Ugly Fuzzy</em> &mdash; Jim Carson, MCYC<br>
+          1972 &mdash; Record not available<br>
+          1973 &mdash; <em>Ugly Fuzzy</em> &mdash; Jim Carson, MRYC<br>
+          1974 &mdash; <em>Envy</em> &mdash; Bob Adams, BHYC<br>
+          1975 &mdash; <em>Little Feat</em> &mdash; Charles Thrower, NBYC<br>
+          1976 &mdash; <em>Ugly Fuzzy</em> &mdash; Jim Carson, MRYC<br>
+          1977 &mdash; Record not available<br>
+          1978 &mdash; <em>Barbarella</em> &mdash; David Ruiter, MCYC<br>
+          1979 &mdash; <em>Dirty Schwantz</em> &mdash; Jody Lutz, MCYC<br>
+          1980 &mdash; <em>Envy</em> &mdash; Bob Adams, MCYC<br>
+          1981 &mdash; Record not available<br>
+          1982 &mdash; Jim Gelenitis, MCYC<br>
+          1983 &mdash; Paul Gelenitis, MCYC<br>
+          1984 &mdash; <em>Miss Fit</em> &mdash; Dick Thomas, MCYC<br>
+          1985 &mdash; <em>Great White</em> &mdash; Alan Ruiter, MCYC<br>
+          1986 &mdash; Paul Gelenitis, MCYC<br>
+          1987 &mdash; Paul Gelenitis, MCYC<br>
+          1988 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1989 &mdash; Craig J. Dooren, MCYC<br>
+          1990 &mdash; Paul Gelenitis, MCYC<br>
+          1991 &mdash; Paul Gelenitis, MCYC<br>
+          1992 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1993 &mdash; Jim Carson / Bill Bogardus, MCYC<br>
+          1994 &mdash; Paul Gelenitis, MCYC<br>
+          1995 &mdash; Joe Buczkowski, MCYC<br>
+          1996 &mdash; Paul Gelenitis, MCYC<br>
+          1997 &mdash; Matt Reiser, LYC<br>
+          1998 &mdash; Mitch Hnatt, MCYC<br>
+          1999 &mdash; Paul Gelenitis, MCYC<br>
+          2000 &mdash; 14595 &mdash; Mitch Hnatt, MCYC<br>
+          2001 &mdash; Race Abandoned<br>
+          2002 &mdash; 14595 &mdash; Mitch Hnatt, MCYC<br>
+          2003 &mdash; 14924 &mdash; Allen Terhune Jr., TRYC<br>
+          2004 &mdash; 14960 &mdash; Mitch Hnatt, MCYC<br>
+          2005 &mdash; Fleet not scheduled<br>
+          2006 &mdash; Race Abandoned &mdash; Thunderstorm<br>
+          2007 &mdash; 14960 &mdash; Mitch Hnatt, MCYC<br>
+          2008 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2009 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2010 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2011 &mdash; No Entries
+        </div>
+      </div>
+    </div>
+
+    <!-- California Cup -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>California Cup</h3>
+        <p class="trophy-meta">Lightning Fleet &mdash; Bay Head Yacht Club Host Race (Retired 1949)</p>
+        <p class="trophy-desc">The California Cup was the original perpetual trophy for the Lightning class on Bay Head Yacht Club&rsquo;s BBYRA race day, contested from 1941 through 1949. It was retired and replaced by the Barnegat Cup in 1952, donated by Jack Orelup.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1941 &mdash; <em>Beth</em> 220 &mdash; Allen Stevens, IHYC<br>
+          1942 &mdash; <em>We Two</em> 383 &mdash; L. Stauffer Oliver, BHYC<br>
+          1943 &mdash; <em>Javelyn</em> 882 &mdash; Jack Orelup, BHYC<br>
+          1944 &mdash; <em>Beth</em> 220 &mdash; Allen Stephens, IHYC<br>
+          1945 &mdash; <em>Javelin</em> &mdash; Jack W. Orelup, BHYC<br>
+          1946 &mdash; <em>Blitzen</em> &mdash; J. C. Bahler, SAYC<br>
+          1947 &mdash; <em>Misbehave</em> 513 &mdash; Louise Cattus Wells, BHYC<br>
+          1948 &mdash; <em>Cardinal</em> 2449 &mdash; Walt Perkins, BWYC<br>
+          1949 &mdash; <em>Flying Mist</em> 1446 &mdash; Jim Carson, MCYC
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ BEACHWOOD YC ═════════════════════════════════════════════════ -->
+<section class="club-section" id="byc">
+  <div class="club-header"><h2>Beachwood Yacht Club</h2><span class="club-abbr">BYC</span></div>
+  <div class="trophy-cards">
+
+    <!-- Walter O. Ritchie Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/bd_ritchie.jpg" alt="Walter O. Ritchie Trophy"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>Walter O. Ritchie Trophy</h3>
+        <p class="trophy-meta">M Scow &lsquo;A&rsquo; Junior / Blue Jay / Club 420 &mdash; Beachwood Yacht Club Host Race</p>
+        <p class="trophy-desc">The Walter O. Ritchie Trophy has been awarded across three different junior classes over its history. Originally sailed for in the M Scow Class &lsquo;A&rsquo; Junior fleet (1973&ndash;1989), it was rededicated to the Blue Jay class (1990&ndash;1998) and then again to the Club 420 class (2009&ndash;2013). The trophy is no longer actively contested.</p>
+        <p class="winners-label">Winners &mdash; Club 420</p>
+        <div class="winners-list">
+          2009 &mdash; OCC 6 &mdash; Paul L. Stevens, BYC<br>
+          2010 &mdash; OCC-12 &mdash; Zach Schippe, BYC<br>
+          2011 &mdash; 5715 &mdash; Charlie Nunn, OGYC<br>
+          2012 &mdash; 309 &mdash; Carolyn Kearney, TRYC<br>
+          2013 &mdash; 5437 &mdash; Jimmy Muller, NBYC<br>
+          2014 &mdash; Fleet not scheduled
+        </div>
+        <p class="winners-label" style="margin-top:12px;">Winners &mdash; Blue Jay</p>
+        <div class="winners-list">
+          1990 &mdash; 6776 &mdash; Willie Demand, OGYC<br>
+          1991 &mdash; 6776 &mdash; Willie Demand, TRYC<br>
+          1992 &mdash; No Entries<br>
+          1993 Race 1 &mdash; Sara Petrillo, TRYC<br>
+          1993 Race 2 &mdash; 6382 &mdash; Jody Kohut, TRYC<br>
+          1994 &mdash; 5872 &mdash; Ryan Bradley, MCYC<br>
+          1995 &mdash; Race Canceled<br>
+          1996 &mdash; Race Canceled<br>
+          1997 &mdash; 6667 &mdash; Maria Kinzel, MCYC<br>
+          1998 &mdash; No Entries
+        </div>
+        <p class="winners-label" style="margin-top:12px;">Winners &mdash; M Scow &lsquo;A&rsquo; Junior</p>
+        <div class="winners-list">
+          1973 &mdash; Stuart W. Tubbs, MYC<br>
+          1974 &mdash; Scott C. McComsey, TRYC<br>
+          1975 &mdash; Russ Lucas, BHYC<br>
+          1976 &mdash; Jeremy W. Bannister, BYC<br>
+          1977 &mdash; Will Berson, LYC<br>
+          1978 &mdash; Nancy Lucas, BHYC<br>
+          1979 &mdash; Michael Fortenbaugh, BHYC<br>
+          1980 &mdash; Record not available<br>
+          1981 &mdash; Roy Fertakos, LYC<br>
+          1982 &mdash; Linda Harkrader, BHYC<br>
+          1983 &mdash; No Race (entry count)<br>
+          1984 &mdash; Sarah Dunn, MRYC<br>
+          1985 &mdash; Louis Ormond, BYC<br>
+          1986 &mdash; No Race (entry count)<br>
+          1987 &mdash; Fleet not scheduled<br>
+          1988 &mdash; Fleet not scheduled<br>
+          1989 &mdash; Race Abandoned
+        </div>
+      </div>
+    </div>
+
+    <!-- Commodore William Lemon Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Commodore William Lemon Trophy</h3>
+        <p class="trophy-meta">E Sloop Fleet &mdash; Beachwood Yacht Club Host Race</p>
+        <p class="trophy-desc">The Commodore William Lemon Trophy was awarded to the winner of the E Sloop class on Beachwood Yacht Club&rsquo;s BBYRA race day. Records are available from 1958 through 1966; winner data is incomplete for most years.</p>
+        <p class="winners-label">Winners (selected records)</p>
+        <div class="winners-list">
+          1958 &mdash; <em>Redskin</em> &mdash; Tom Chapman<br>
+          1959 &mdash; Record not available<br>
+          1960 &mdash; Record not available<br>
+          1961 &mdash; Cliff Campbell, BYC<br>
+          1962 &mdash; Record not available<br>
+          1963 &mdash; Runyon Colie Jr., MYC<br>
+          1964 &mdash; Record not available<br>
+          1966 &mdash; Record not available
+        </div>
+      </div>
+    </div>
+
+    <!-- Estelle Gallagher Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Estelle Gallagher Trophy</h3>
+        <p class="trophy-meta">Jr. Jet Fleet &mdash; Beachwood Yacht Club Invitational Race</p>
+        <p class="trophy-desc">The Estelle Gallagher Trophy was awarded to the winner of the Junior Jet class invitational race at Beachwood Yacht Club. Records cover 1960 through 1963; specific winner data is not available in the archive.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1960 &mdash; Record not available<br>
+          1961 &mdash; Record not available<br>
+          1962 &mdash; Record not available<br>
+          1963 &mdash; Record not available
+        </div>
+      </div>
+    </div>
+
+    <!-- Gobbler Bowl -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Gobbler Bowl</h3>
+        <p class="trophy-meta">Penguin &amp; Laser Fleet &mdash; Beachwood Thanksgiving Regatta</p>
+        <p class="trophy-desc">The Gobbler Bowl was awarded annually at Beachwood Yacht Club&rsquo;s Thanksgiving Regatta, with separate awards for the Penguin and Laser classes. The regatta was contested from the early 1960s through 1976. Bob Martus of Port Washington, NY was the dominant Penguin winner; Runyon Colie of MYC won multiple early years.</p>
+        <p class="winners-label">Winners &mdash; Penguin</p>
+        <div class="winners-list">
+          1963 &mdash; Cliff Campbell, TRYC<br>
+          1964 &mdash; Cliff Campbell, TRYC<br>
+          1966 &mdash; Cliff Campbell, TRYC<br>
+          1968 &mdash; Runyon Colie, MYC<br>
+          1969 &mdash; Runyon Colie, MYC<br>
+          1970 &mdash; Record not available<br>
+          1971 &mdash; Record not available<br>
+          1972 &mdash; Record not available<br>
+          1973 &mdash; Terry Kempen, TRYC<br>
+          1974 &mdash; Bob Martus, Port Washington NY<br>
+          1975 &mdash; Bob Martus, Port Washington NY<br>
+          1976 &mdash; Bob Martus, Port Washington NY
+        </div>
+        <p class="winners-label" style="margin-top:12px;">Winners &mdash; Laser</p>
+        <div class="winners-list">
+          1975 &mdash; Had Brick, IHYC<br>
+          1976 &mdash; Shawn Kempton, OGYC
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ ISLAND HEIGHTS YC ════════════════════════════════════════════ -->
+<section class="club-section" id="ihyc">
+  <div class="club-header"><h2>Island Heights Yacht Club</h2><span class="club-abbr">IHYC</span></div>
+  <div class="trophy-cards">
+
+    <!-- J. Wellington Chops Bowl -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>J. Wellington Chops Bowl</h3>
+        <p class="trophy-meta">Jet 14 Fleet &mdash; Island Heights Yacht Club Regatta</p>
+        <p class="trophy-desc">The J. Wellington Chops Bowl was awarded to the winner of the Jet 14 class regatta at Island Heights Yacht Club. Records span 1956 through 1968. Max Culpepper of IHYC won the trophy in both 1960 and 1964 aboard <em>Ginger Snaps</em>.</p>
+        <p class="winners-label">Winners (selected records)</p>
+        <div class="winners-list">
+          1956&ndash;1958 &mdash; Records not available<br>
+          1959 &mdash; Harry Sindle<br>
+          1960 &mdash; <em>Ginger Snaps</em> &mdash; Max Culpepper, BYC<br>
+          1961&ndash;1963 &mdash; Records not available<br>
+          1964 &mdash; <em>Ginger Snaps</em> &mdash; Max Culpepper, IHYC<br>
+          1965&ndash;1968 &mdash; Records not available
+        </div>
+      </div>
+    </div>
+
+    <!-- Jack Wright Jr. Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/ih_wright.jpg" alt="Jack Wright Jr. Trophy"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>Jack Wright Jr. Trophy</h3>
+        <p class="trophy-meta">Lightning Fleet &mdash; Island Heights Yacht Club Host Day</p>
+        <p class="trophy-desc">The Jack Wright Jr. Trophy was awarded to the winner of the Lightning class on Island Heights Yacht Club&rsquo;s BBYRA Host Day race. Records span from 1941 through 2011. Jim Carson and Paul Gelenitis of MCYC dominated the trophy across multiple decades. The fleet was not scheduled for several years in the mid-2000s.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1941 &mdash; <em>Beth</em> 220 &mdash; Howard Siddons, IHYC<br>
+          1942 &mdash; <em>We Too</em> 383 &mdash; L. Stauffer Oliver, BHYC<br>
+          1943 &mdash; <em>Beth</em> 220 &mdash; Allan Stephens, IHYC<br>
+          1944 &mdash; <em>Javelin</em> 882 &mdash; J. W. Orelup, BHYC<br>
+          1945 &mdash; <em>Blitzen</em> &mdash; J. C. Behler, SAYC<br>
+          1946 &mdash; <em>Blitzen</em> &mdash; J. C. Behler, SAYC<br>
+          1947 &mdash; <em>Thrasher</em> 1743 &mdash; Fred E. Sammel, SAYC<br>
+          1948 &mdash; <em>Frisky</em> 2967 &mdash; Walter Bray, MYC<br>
+          1949 &mdash; <em>Sweet 16</em> 16 &mdash; H. V. Siddons, IHYC<br>
+          1950 &mdash; <em>White Flash</em> &mdash; LYC<br>
+          1951 &mdash; <em>You Bet</em> &mdash; TRYC<br>
+          1952 &mdash; <em>Javelin</em> &mdash; J. W. Orelup, BHYC<br>
+          1953 &mdash; <em>Whirlwind</em> &mdash; MRYC<br>
+          1954 &mdash; <em>Whirlwind</em> &mdash; BHYC<br>
+          1955 &mdash; <em>Vagabond</em> 5458 &mdash; Bob Adams, BHYC<br>
+          1956 &mdash; <em>Vagabond</em> 5458 &mdash; Bob Adams, BHYC<br>
+          1957 &mdash; <em>Trident</em> 6884 &mdash; Jim Carson, MCYC<br>
+          1958 &mdash; <em>Whirlwind</em> 5409 &mdash; Knight Alexander, BHYC<br>
+          1959 &mdash; <em>Trident</em> 6884 &mdash; Jim Carson, MCYC<br>
+          1960 &mdash; <em>Vagabond Too</em> 6906 &mdash; Bob Adams, BHYC<br>
+          1961 &mdash; <em>Trident</em> 6884 &mdash; Jim Carson, MCYC<br>
+          1962 &mdash; <em>Trident</em> 6884 &mdash; Jim Carson, MCYC<br>
+          1963 &mdash; <em>Trident II</em> 8484 &mdash; Jim Carson, MCYC<br>
+          1964 &mdash; <em>Trident II</em> 8484 &mdash; Jim Carson, MCYC<br>
+          1965 &mdash; <em>Vagabond Too</em> 6906 &mdash; Bob Adams, BHYC<br>
+          1966 &mdash; <em>Flying Scud</em> 9984 &mdash; Jim Carson, MCYC<br>
+          1967 &mdash; <em>Plane Jane</em> &mdash; Jack Orlup, BHYC<br>
+          1968 &mdash; <em>Blabs</em> &mdash; Bob Adams, BHYC<br>
+          1969 &mdash; <em>Samson</em> &mdash; Alan Ruiter, NBYC<br>
+          1970 &mdash; Jim Carson, MCYC<br>
+          1971 &mdash; <em>Loveit</em> &mdash; Bill Newman, MCYC<br>
+          1972 &mdash; Bill Cramer, MCYC<br>
+          1973 &mdash; Bill Newman, MCYC<br>
+          1974 &mdash; Bill Newman, MCYC<br>
+          1975 &mdash; Charles Thrower, NBYC<br>
+          1976 &mdash; Jim Carson, MCYC<br>
+          1977 &mdash; <em>Fuzzy</em> &mdash; Jim Carson, MCYC<br>
+          1978 &mdash; Record not available<br>
+          1979 &mdash; <em>Miss Fit</em> &mdash; Dick Thomas, MCYC<br>
+          1980 &mdash; Jim Carson, MCYC<br>
+          1981 &mdash; Jim Carson, MCYC<br>
+          1982 &mdash; 13710 &mdash; Jim Carson, MCYC<br>
+          1983 &mdash; 13821 &mdash; Keith Taboada, MCYC<br>
+          1984 &mdash; 13821 &mdash; Keith Taboada, MCYC<br>
+          1985 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1986 &mdash; 12405 &mdash; Alan Ruiter, MCYC<br>
+          1987 &mdash; 14180 &mdash; Jim Carson, MCYC<br>
+          1988 &mdash; 14029 &mdash; Craig Dooren, MCYC<br>
+          1989 &mdash; 14180 &mdash; Jim Carson, MCYC<br>
+          1990 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1991 &mdash; 13084 &mdash; Paul F. Gelenitis, MCYC<br>
+          1992 &mdash; 14424 &mdash; James G. Carson, MCYC<br>
+          1993 &mdash; 11894 &mdash; David S. Ruiter, MCYC<br>
+          1994 &mdash; 11894 &mdash; David Ruiter, MCYC<br>
+          1995 &mdash; 14595 &mdash; J G Carson, MCYC<br>
+          1996 &mdash; 14450 &mdash; Jarrett/Jeremy Lynn, MCYC<br>
+          1997 &mdash; 14684 &mdash; Paul Gelenitis, MCYC<br>
+          1998 &mdash; 14684 &mdash; Paul Gelenitis, MCYC<br>
+          1999 &mdash; 14684 &mdash; Paul Gelenitis, MCYC<br>
+          2000 &mdash; 14595 &mdash; Mitch Hnatt, MCYC<br>
+          2001 &mdash; 14595 &mdash; Mitch Hnatt, MCYC<br>
+          2002 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2003&ndash;2006 &mdash; Not scheduled<br>
+          2007 &mdash; Not scheduled<br>
+          2008 &mdash; 14960 &mdash; Mitch Hnatt, MCYC<br>
+          2009 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2010 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2011 &mdash; 14589 &mdash; Amanda Bottomly, IHYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Dickerman Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Dickerman Trophy</h3>
+        <p class="trophy-meta">Snipe Fleet &mdash; Island Heights Yacht Club Regatta</p>
+        <p class="trophy-desc">The Dickerman Trophy was awarded to the winner of the Snipe class regatta at Island Heights Yacht Club. Records span 1938 through 1944. Jack Wright won the first recorded year aboard <em>Neriad</em>, and Gordon Kempton won back-to-back in 1941 and 1942.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1938 &mdash; <em>Neriad</em> 1348 &mdash; Jack Wright, IHYC<br>
+          1939 &mdash; Record not available<br>
+          1940 &mdash; <em>Bandit</em> &mdash; Jack English, IHYC<br>
+          1941 &mdash; <em>Rocket</em> 4220 &mdash; Gordon Kempton, IHYC<br>
+          1942 &mdash; <em>Rocket</em> 4220 &mdash; Gordon Kempton, IHYC<br>
+          1943 &mdash; Record not available<br>
+          1944 &mdash; <em>Solano</em> &mdash; Ernest Dean, IHYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Jack English Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Jack English Trophy</h3>
+        <p class="trophy-meta">Snipe Fleet &mdash; Island Heights Yacht Club Race</p>
+        <p class="trophy-desc">The Jack English Trophy was awarded to the winner of the Snipe class race at Island Heights Yacht Club. Only a single winner is recorded in the archive.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1941 &mdash; <em>Bandit</em> &mdash; Jack English, IHYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Philip E. Reynolds Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/ih_PhilipReynolds.jpg" alt="Philip E. Reynolds Trophy"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>Philip E. Reynolds Trophy</h3>
+        <p class="trophy-meta">Snipe Fleet Series / Senior Comet &mdash; Island Heights Yacht Club</p>
+        <p class="trophy-desc">Donated by Philip E. Reynolds as the BBYRA season championship trophy for the Snipe class, this trophy was later rededicated to the Senior Comet fleet. Leonard Egee of IHYC dominated the Comet era, winning seven times between 1955 and 1962. A <a href="https://bbyraarchive.org/trophy/ih_PhilipReynoldsDOG.doc" target="_blank" rel="noopener">Deed of Gift</a> is available in the archive.</p>
+        <p class="winners-label">Winners &mdash; Senior Comet Fleet</p>
+        <div class="winners-list">
+          1954 &mdash; <em>Argosy</em> &mdash; George Dosher<br>
+          1955 &mdash; <em>Aeolus</em> &mdash; Leonard Egee<br>
+          1956 &mdash; <em>Invictus II</em> &mdash; Beck Brown<br>
+          1957 &mdash; <em>Aeolus</em> &mdash; Leonard Egee<br>
+          1958 &mdash; <em>Argosy</em> &mdash; George Dosher<br>
+          1959 &mdash; <em>Argosy</em> &mdash; George Dosher<br>
+          1960 &mdash; <em>Aeolus</em> &mdash; Leonard Egee<br>
+          1961 &mdash; <em>Aeolus</em> &mdash; Leonard Egee<br>
+          1962 &mdash; <em>Aeolus</em> &mdash; Leonard Egee<br>
+          1963 &mdash; <em>Windsong</em> &mdash; Fred Slack Jr.<br>
+          1964 &mdash; <em>Serendipity</em> &mdash; Steve Tyler
+        </div>
+        <p class="winners-label" style="margin-top:12px;">Winners &mdash; Snipe Fleet Series Championship</p>
+        <div class="winners-list">
+          1947 &mdash; <em>I. Q.</em> 3712 &mdash; George Nelson, IHYC<br>
+          1948 &mdash; <em>Jolly Roger</em> 6914 &mdash; John Stillman Jr., IHYC<br>
+          1949 &mdash; <em>Blitzen</em> 1839 &mdash; Gary Hoyt, BDYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Turner Cup -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Turner Cup</h3>
+        <p class="trophy-meta">Snipe Fleet &mdash; Island Heights Yacht Club Host Race</p>
+        <p class="trophy-desc">The Turner Cup was awarded to the winner of the Snipe class race at Island Heights Yacht Club, with records spanning 1938 through 1960. Three newspaper PDF records are available in the archive for 1949, 1950, and 1952. Gordon Kempton, Jack Stillman, and <em>Rocket</em> 4220 appear across multiple years.</p>
+        <p class="winners-label">Winners (selected records)</p>
+        <div class="winners-list">
+          1938 &mdash; <em>Neriad</em> 1348 &mdash; Jack Wright, IHYC<br>
+          1939 &mdash; <em>Shadow</em> &mdash; Harry Hooper, IHYC<br>
+          1940 &mdash; <em>Solano</em> &mdash; Paul A. Freeman, IHYC<br>
+          1941 &mdash; <em>Rocket</em> 4220 &mdash; Gordon Kempton, IHYC<br>
+          1942 &mdash; <em>Rocket</em> 4220 &mdash; Gordon Kempton, IHYC<br>
+          1943 &mdash; <em>Sylph</em> 550 &mdash; George Whittle, IHYC<br>
+          1944 &mdash; <em>Rocket</em> 4220 &mdash; Thomas Chapman, IHYC<br>
+          1945 &mdash; <em>Bandit</em> &mdash; D. Mathews, IHYC<br>
+          1946 &mdash; <em>I. Q.</em> &mdash; G. Nelson, IHYC<br>
+          1947 &mdash; <em>Sylph</em> 550 &mdash; George Whittle, IHYC<br>
+          1948 &mdash; <em>Hoodwink</em> 20 &mdash; Blackwell Sawyer, BDYC<br>
+          1949 &mdash; <em>Blitzer</em> 4839 &mdash; Bob &amp; Garry Hoyt, BDYC<br>
+          1950 &mdash; <em>Jolly Roger</em> 6914 &mdash; Jack Stillman, IHYC<br>
+          1951 &mdash; <em>Jolly Roger</em> 6914 &mdash; J. Stillman Jr., IHYC<br>
+          1952 &mdash; Beth Olsen<br>
+          1953&ndash;1960 &mdash; Records not available
+        </div>
+      </div>
+    </div>
+
+    <!-- Morris Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Morris Trophy</h3>
+        <p class="trophy-meta">Star Fleet &mdash; Island Heights Yacht Club Regatta</p>
+        <p class="trophy-desc">The Morris Trophy was awarded to the winner of the Star class regatta at Island Heights Yacht Club. Only two years are recorded. Notably, in 1937 the trophy was won by <em>Arrow II</em> but refused by the skipper because he was the donor; the trophy was instead awarded to second-place <em>Sue</em>, skippered by Jack Wright.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1937 &mdash; <em>Sue</em> &mdash; Jack Wright, IHYC <small>(donor declined; 2nd place awarded)</small><br>
+          1938 &mdash; <em>Sue</em> &mdash; F. T. Brooks, SPYC
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ LAVALLETTE YC ════════════════════════════════════════════════ -->
+<section class="club-section" id="lyc">
+  <div class="club-header"><h2>Lavallette Yacht Club</h2><span class="club-abbr">LYC</span></div>
+  <div class="trophy-cards">
+
+    <!-- O'Malley Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>O&rsquo;Malley Trophy</h3>
+        <p class="trophy-meta">17&prime; Catboat Fleet &mdash; Lavallette Yacht Club Host Race</p>
+        <p class="trophy-desc">The O&rsquo;Malley Trophy was awarded to the winner of the 17-foot Catboat class on Lavallette Yacht Club&rsquo;s BBYRA race day. Records cover 1954 through 1960; no winner data is available in the archive for these years.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1954&ndash;1960 &mdash; Records not available
+        </div>
+      </div>
+    </div>
+
+    <!-- George Hoffman Memorial Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>George Hoffman Memorial Trophy</h3>
+        <p class="trophy-meta">Junior Comet Fleet &mdash; Lavallette Yacht Club Host Day</p>
+        <p class="trophy-desc">The George Hoffman Memorial Trophy was awarded to the winner of the Junior Comet class on Lavallette Yacht Club&rsquo;s BBYRA Host Day. Records span 1962 through 1968.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1962 &mdash; Record not available<br>
+          1963 &mdash; Larry Deering, LYC<br>
+          1964 &mdash; Steve Tyler, IHYC<br>
+          1965 &mdash; Tad La Fountain, BHYC<br>
+          1966 &mdash; Watson, LYC<br>
+          1967 &mdash; No Race &mdash; Lack of wind<br>
+          1968 &mdash; Tully, LYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Marie Slovak Memorial Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/la_slovak.jpg" alt="Marie Slovak Memorial Trophy"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>Marie Slovak Memorial Trophy</h3>
+        <p class="trophy-meta">Lightning Fleet &mdash; Lavallette Yacht Club Host Day</p>
+        <p class="trophy-desc">The Marie Slovak Memorial Trophy was awarded to the winner of the Lightning class on Lavallette Yacht Club&rsquo;s BBYRA Host Day. Records span 1968 through 2011. MCYC sailors, particularly from the Carson and Gelenitis families, dominated the trophy across its entire history.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1968 &mdash; John Scott, BHYC<br>
+          1969 &mdash; John S. Orelup, BHYC<br>
+          1970 &mdash; John S. Orelup, BHYC<br>
+          1971 &mdash; John S. Orelup, BHYC<br>
+          1972 &mdash; Bill Cramer, MCYC<br>
+          1973 &mdash; Charles Thrower<br>
+          1974 &mdash; Bill Newman, MCYC<br>
+          1975 &mdash; Alan Terhune, TRYC<br>
+          1976 &mdash; Bob Hutchinson<br>
+          1977 &mdash; Bob Hutchinson<br>
+          1978 &mdash; Bob Hutchinson<br>
+          1979 &mdash; Charles Thrower<br>
+          1980 &mdash; Charles Thrower<br>
+          1981 &mdash; 11411 &mdash; Dick Thomas, MCYC<br>
+          1982 &mdash; 13649 &mdash; Bob DeAngelis, SPYC<br>
+          1983 &mdash; 11411 &mdash; Dick Thomas, MCYC<br>
+          1984 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1985 &mdash; 12405 &mdash; Alan Ruiter, MCYC<br>
+          1986 &mdash; 14080 &mdash; Philip Kinzel Jr., MCYC<br>
+          1987 &mdash; 12405 &mdash; Alan Ruiter, MCYC<br>
+          1988 &mdash; 14188 &mdash; Jim Gelenitis, MCYC<br>
+          1989 &mdash; 11972 &mdash; Paul Gelenitis, MCYC<br>
+          1990 &mdash; 11894 &mdash; David Ruiter, MCYC<br>
+          1991 &mdash; 14014 &mdash; Djoerd Hoekstra, MCYC<br>
+          1992 &mdash; Joe Buczkowski, MCYC<br>
+          1993 &mdash; Paul Gelenitis, MCYC<br>
+          1994 &mdash; 14424 &mdash; Joe Buczkowski, MCYC<br>
+          1995 &mdash; Matt Reiser, SPYC<br>
+          1996 &mdash; Joe Buczkowski, MCYC<br>
+          1997 &mdash; Ryan Dunn, MCYC<br>
+          1998 &mdash; Paul Gelenitis, MCYC<br>
+          1999 &mdash; Jim Carson, MCYC<br>
+          2000 &mdash; 14595 &mdash; Mitch Hnatt, MCYC<br>
+          2001 &mdash; 14595 &mdash; Mitch Hnatt, MCYC<br>
+          2002 &mdash; 14595 &mdash; Mitch Hnatt, MCYC<br>
+          2003 &mdash; 14924 &mdash; Alan Terhune Jr., TRYC<br>
+          2004 &mdash; 14960 &mdash; Mitch Hnatt, MCYC<br>
+          2005 &mdash; 15057 &mdash; Jody Lutz, MCYC<br>
+          2006 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2007 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2008 &mdash; 14960 &mdash; Mitch Hnatt, MCYC<br>
+          2009 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2010 &mdash; 14589 &mdash; Amanda Bottomley, IHYC<br>
+          2011 &mdash; All Races Canceled &mdash; Tropical Storm Irene
+        </div>
+      </div>
+    </div>
+
+    <!-- Cattus Island Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Cattus Island Trophy</h3>
+        <p class="trophy-meta">Penguin Fleet &mdash; Lavallette Yacht Club Regatta</p>
+        <p class="trophy-desc">The Cattus Island Trophy was awarded to the winner of the Penguin class regatta at Lavallette Yacht Club. Records span 1972 through 1979; winner data is available for 1974 (Will Berson, LYC) and 1979 (David Applegate, LYC).</p>
+        <p class="winners-label">Winners (selected records)</p>
+        <div class="winners-list">
+          1972&ndash;1973 &mdash; Records not available<br>
+          1974 &mdash; Will Berson, LYC<br>
+          1975&ndash;1978 &mdash; Records not available<br>
+          1979 &mdash; David Applegate, LYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Law Memorial Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/la_law.jpg" alt="Law Memorial Trophy"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>Law Memorial Trophy</h3>
+        <p class="trophy-meta">Sneakbox &lsquo;A&rsquo; Fleet &mdash; Lavallette Yacht Club Host Race</p>
+        <p class="trophy-desc">The Law Memorial Trophy was established in 1947 in memory of brothers Stan and Bob Law, who lost their lives in World War II. It was awarded to the winner of the Class &lsquo;A&rsquo; Sneakbox race at LYC from 1947 through 2001. This trophy was retired and replaced by the Bob Gough Trophy starting in 2003.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1947 &mdash; <em>Big Speed</em> L42 &mdash; Betty Jane McCabe, LYC<br>
+          1948 &mdash; <em>Tern II</em> O67 &mdash; George Gronde, OGYC<br>
+          1949 &mdash; <em>Skimmer</em> B01 &mdash; Cliff Campbell, BYC<br>
+          1950 &mdash; <em>Tern II</em> O67 &mdash; George Gronde, OGYC<br>
+          1951 &mdash; <em>Tern II</em> O67 &mdash; George Gronde, OGYC<br>
+          1952 &mdash; Record not available<br>
+          1953 &mdash; <em>Tern II</em> &mdash; Charles Sparks<br>
+          1954 &mdash; Record not available<br>
+          1955 &mdash; <em>Many Ha Has</em> OG5 &mdash; Mary Dreier, OGYC<br>
+          1956 &mdash; <em>Andros II</em> B7 &mdash; Peter Jones, BYC<br>
+          1957 &mdash; A. S. Blagden, MYC<br>
+          1958 &mdash; <em>Stormy Petrel</em> L99 &mdash; Jane Newbury, LYC<br>
+          1959 &mdash; <em>Overdue</em> L9 &mdash; John J. Applegate, LYC<br>
+          1960 &mdash; Record not available<br>
+          1961 &mdash; <em>Rag Mop</em> M30 &mdash; John R. Goble<br>
+          1962 &mdash; <em>Hot Toddy</em> BD88 &mdash; Michael W. Sparks, BYC<br>
+          1963 &mdash; <em>Termite</em> S1 &mdash; Gary Sayia, SPYC<br>
+          1964 &mdash; <em>Keel Under</em> BD81 &mdash; Arch Bricker, BYC<br>
+          1965 &mdash; <em>Adventurer</em> L1 &mdash; Gary H. Watson, LYC<br>
+          1966 &mdash; <em>Adventurer</em> L1 &mdash; Gary H. Watson, LYC<br>
+          1967 &mdash; Lack of wind<br>
+          1968 &mdash; <em>Splash</em> &mdash; Henry Bossett, MRYC<br>
+          1969 &mdash; Doug Simonson, SPYC<br>
+          1970 &mdash; Howard H. Wright, MRYC<br>
+          1971&ndash;1972 &mdash; Records not available<br>
+          1973 &mdash; <em>Sunshine</em> &mdash; Richard Switlik Jr.<br>
+          1974 &mdash; <em>Appleseed</em> &mdash; John J. Applegate, LYC<br>
+          1975 &mdash; <em>Appleseed</em> &mdash; John J. Applegate, LYC<br>
+          1976 &mdash; <em>Appleseed</em> &mdash; John J. Applegate, LYC<br>
+          1977 &mdash; <em>Appleseed</em> &mdash; John J. Applegate, LYC<br>
+          1978 &mdash; Nelson S. Hartranft II, OGYC<br>
+          1979 &mdash; Nelson S. Hartranft II, OGYC<br>
+          1980 &mdash; <em>Who</em> &mdash; Richard F. Rein<br>
+          1981 &mdash; Nelson S. Hartranft II, OGYC<br>
+          1982 &mdash; MR13 &mdash; Wayne Patterson, MRYC<br>
+          1983 &mdash; MR13 &mdash; Wayne Patterson, MRYC<br>
+          1984 &mdash; M16 &mdash; Jim Earle, MYC<br>
+          1985 &mdash; T8 &mdash; Dan Crabbe, TRYC<br>
+          1986 &mdash; MR7 &mdash; John Uhden, MRYC<br>
+          1987 &mdash; S1 &mdash; Garret Sayia, SPYC<br>
+          1988 &mdash; No Race<br>
+          1989 &mdash; Christine M. Wright (Patterson), MRYC<br>
+          1990 &mdash; MR13 &mdash; G. Wayne Patterson, MRYC<br>
+          1991 &mdash; MR13 &mdash; G. Wayne Patterson, MRYC<br>
+          1992 &mdash; MR13 &mdash; G. Wayne Patterson, MRYC<br>
+          1993 &mdash; T11 &mdash; Jeffrey Lines, TRYC<br>
+          1994 &mdash; T8 &mdash; Dan Crabbe, TRYC<br>
+          1995 &mdash; S1 &mdash; Garret Sayia, SPYC<br>
+          1996 &mdash; S1 &mdash; Garret Sayia, MYC<br>
+          1997 &mdash; T11 &mdash; Jeffrey D. Lines, TRYC<br>
+          1998 &mdash; T8 &mdash; Dan Crabbe, TRYC<br>
+          1999 &mdash; T8 &mdash; Dan Crabbe, TRYC<br>
+          2000 &mdash; Race Abandoned<br>
+          2001 &mdash; M1 &mdash; Ed Vienckowski, MYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Leadbetter Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Leadbetter Trophy</h3>
+        <p class="trophy-meta">Sneakbox &lsquo;B&rsquo; Fleet &mdash; Lavallette Yacht Club Host Race</p>
+        <p class="trophy-desc">The Leadbetter Trophy was awarded to the winner of the Class &lsquo;B&rsquo; Sneakbox race on Lavallette Yacht Club&rsquo;s BBYRA race day. Records span 1949 through 1979; winner data is only available for 1949, 1963, 1964, and 1968.</p>
+        <p class="winners-label">Winners (selected records)</p>
+        <div class="winners-list">
+          1949 &mdash; <em>So-So</em> &mdash; E. J. O&rsquo;Malley Jr., LYC<br>
+          1950&ndash;1962 &mdash; Records not available<br>
+          1963 &mdash; Linda Clayton, LYC<br>
+          1964 &mdash; Gary Watson, LYC<br>
+          1965&ndash;1967 &mdash; Records not available<br>
+          1967 &mdash; Lack of wind<br>
+          1968 &mdash; Keith Wilson, SPYC<br>
+          1969&ndash;1979 &mdash; Records not available
+        </div>
+      </div>
+    </div>
+
+    <!-- Yachtsman's Club of Philadelphia Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/ma_yachtsmans.jpg" alt="Yachtsman's Club of Philadelphia Trophy"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>Yachtsman&rsquo;s Club of Philadelphia Trophy</h3>
+        <p class="trophy-meta">&lsquo;B&rsquo; Sneakbox / Laser &lsquo;M&rsquo; / Laser Radial &mdash; Originally LYC, now held by MYC</p>
+        <p class="trophy-desc">This trophy was originally a Lavallette Yacht Club trophy for &lsquo;B&rsquo; Sneakboxes. If the trophy was won three times by the same person, it passed permanently to the winner&rsquo;s club. Paulding Phelps of MYC won it three times (1946&ndash;1948) and the trophy became Mantoloking&rsquo;s. MYC has continued to race it, latterly in the junior class. Records span 1937 through 2002.</p>
+        <p class="winners-label">Winners (selected records)</p>
+        <div class="winners-list">
+          1937 &mdash; <em>Barnegat Belle</em> &mdash; Tom King, LYC<br>
+          1938 &mdash; <em>Applejack</em><br>
+          1940 &mdash; <em>Breeze</em> &mdash; Earl B. Stokes, MYC<br>
+          1941 &mdash; <em>Breeze</em> &mdash; Earl B. Stokes, MYC<br>
+          1942 &mdash; Did not finish within time limit<br>
+          1943 &mdash; <em>Vagabond</em> M25 &mdash; William Snyder, OGYC<br>
+          1944 &mdash; <em>Winpin</em> &mdash; Edward Prince, MYC<br>
+          1945 &mdash; <em>Nomad</em> M13 &mdash; E. White, MYC<br>
+          1946 &mdash; <em>Fan Tan</em> M15 &mdash; Paulding Phelps, MYC<br>
+          1947 &mdash; <em>Fan Tan</em> M15 &mdash; Paulding Phelps, MYC<br>
+          1948 &mdash; <em>Fan Tan</em> M15 &mdash; Paulding Phelps, MYC<br>
+          1949 &mdash; <em>Sky Rocket</em> B9 &mdash; John Harkrader, BHYC<br>
+          1952 &mdash; <em>Hot Air</em> &mdash; Jack Urner, BHYC<br>
+          1955 &mdash; Jim Urner, BHYC<br>
+          1986 &mdash; Peter Hurley, MYC (Laser &lsquo;M&rsquo;)<br>
+          1988 &mdash; 131672 &mdash; Peter Wright, MYC (Laser Radial)<br>
+          1992 &mdash; Joseph M. Buczkowski, MCYC
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ METEDECONK RIVER YC ══════════════════════════════════════════ -->
+<section class="club-section" id="mryc">
+  <div class="club-header"><h2>Manasquan River Yacht Club</h2><span class="club-abbr">MRYC</span></div>
+  <div class="trophy-cards">
+
+    <!-- Wardell Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Wardell Trophy</h3>
+        <p class="trophy-meta">M Sloop Fleet &mdash; Manasquan River Yacht Club Regatta</p>
+        <p class="trophy-desc">The Wardell Trophy was awarded to the winner of the M Sloop class regatta at Manasquan River Yacht Club. Records are listed from 1963 through 1974; no winner data is available in the archive for any of these years.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1963&ndash;1974 &mdash; Records not available
+        </div>
+      </div>
+    </div>
+
+    <!-- Challenge Cup -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/mr_challenge.jpg" alt="Challenge Cup"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>Challenge Cup</h3>
+        <p class="trophy-meta">Sneakbox Fleet &mdash; Manasquan River Yacht Club / BBYRA Race</p>
+        <p class="trophy-desc">The Challenge Cup is the legacy of a five-year series of annual three-race regattas between the Belmar Yacht Club and Manasquan River Yacht Club beginning in 1906, retired to MRYC after a tie-breaking regatta in 1910. The sterling silver trophy was tooled by Tiffany &amp; Co., New York at a cost of $250. A base was added and the trophy used for an open Sneakbox regatta for many years. In 2003 it was rededicated to the winner of the Sneakbox fleet at the MRYC-hosted BBYRA regatta.</p>
+        <p class="winners-label">Winners &mdash; BBYRA Sneakbox (2003&ndash;2014)</p>
+        <div class="winners-list">
+          2003 &mdash; OG24 &mdash; Russ Lines, OGYC<br>
+          2004 &mdash; S7 &mdash; Ed Vienckowski, SPYC<br>
+          2005 &mdash; <em>Wehupoktis</em> &mdash; Ed Vienckowski, SPYC<br>
+          2006 &mdash; <em>Lenape Scout</em> BH7 &mdash; Bill O&rsquo;Brien, BHYC<br>
+          2007 &mdash; <em>Lenape Scout</em> BH7 &mdash; Bill O&rsquo;Brien, BHYC<br>
+          2008 &mdash; <em>Old Black Magic</em> &mdash; Russ Lines, OGYC<br>
+          2009 &mdash; <em>Lenape Scout</em> BH7 &mdash; Henry O&rsquo;Brien, BHYC<br>
+          2010 &mdash; L79 &mdash; Ryan Stack, SPYC<br>
+          2011 &mdash; <em>Double Trouble</em> S4 &mdash; Tim Brown, SPYC<br>
+          2012 &mdash; No entries<br>
+          2014 &mdash; No entries
+        </div>
+        <p class="winners-label" style="margin-top:12px;">Winners &mdash; Open Sneakbox Regatta (selected records)</p>
+        <div class="winners-list">
+          1958 &mdash; Harry O. Uhden Jr.<br>
+          1959 &mdash; Joseph M. Fitzpatrik<br>
+          1960 &mdash; Gail M. Wardell<br>
+          1961 &mdash; Richard A. Potter<br>
+          1962 &mdash; David E. Massey<br>
+          1963 &mdash; John M. Wardell<br>
+          1964 &mdash; Richard Wight<br>
+          1965 &mdash; Joseph Fitzpatrik<br>
+          1966 &mdash; Gail Wardell Dunn<br>
+          1967 &mdash; Howard H. Wight<br>
+          1968 &mdash; L. Ward Wight<br>
+          1969 &mdash; Howard H. Wight<br>
+          1970 &mdash; Howard H. Wight<br>
+          1971 &mdash; Howard H. Wight<br>
+          1972 &mdash; L. Ward Wight<br>
+          1973 &mdash; James I. Dunn<br>
+          1974 &mdash; James I. Dunn<br>
+          1975 &mdash; James I. Dunn<br>
+          1976 &mdash; Wayne Patterson &amp; Greg Deppler<br>
+          1977 &mdash; Howard H. Wight<br>
+          1978 &mdash; Nicholas P. Lintner<br>
+          1979 &mdash; Wayne Patterson<br>
+          1980 &mdash; John Unden<br>
+          1981 &mdash; Henry Bosset<br>
+          1982 &mdash; Wayne Patterson<br>
+          1983 &mdash; John Unden<br>
+          1984 &mdash; Richard Wight<br>
+          1985 &mdash; Henry Bosset &amp; John Unden<br>
+          1986 &mdash; Wayne Patterson<br>
+          1987 &mdash; Wayne Patterson<br>
+          1988 &mdash; Wayne Patterson<br>
+          1989 &mdash; Gary Sayia<br>
+          1990 &mdash; William Wight<br>
+          1991 &mdash; William Wight<br>
+          1992 &mdash; Michael Spark<br>
+          1993 &mdash; William Wight<br>
+          1994 &mdash; Jeff Lines<br>
+          1999 &mdash; Peter Wight
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ MANTOLOKING YC ═══════════════════════════════════════════════ -->
+<section class="club-section" id="myc">
+  <div class="club-header"><h2>Mantoloking Yacht Club</h2><span class="club-abbr">MYC</span></div>
+  <div class="trophy-cards">
+
+    <!-- Mantoloking Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Mantoloking Trophy</h3>
+        <p class="trophy-meta">Various Fleets &mdash; Mantoloking Yacht Club Host Race</p>
+        <p class="trophy-desc">The Mantoloking Trophy was awarded to the winner of the BBYRA race at Mantoloking Yacht Club across various classes over its history, including Comet, Lightning, Sneakbox, and Jr. Comet. Records span 1944 through 1955.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1944 &mdash; &ldquo;A&rdquo; Sneakbox &mdash; <em>Wigwam</em> &mdash; Clifford Lewis, MYC<br>
+          1945 &mdash; &ldquo;B&rdquo; Sneakbox &mdash; <em>Wigwam</em> &mdash; L. Lewis / Helen Ill, MYC<br>
+          1946 &mdash; Jr. Comet &mdash; <em>Restless</em> &mdash; E. Pilling / B. Boocock, MYC<br>
+          1947 &mdash; &ldquo;A&rdquo; Sneakbox &mdash; <em>My Man Friday</em> &mdash; John Bryant, MYC<br>
+          1948 &mdash; Comet &mdash; <em>Lucky Pierre</em> &mdash; H. Bennett Robinson Jr., LYC<br>
+          1949 &mdash; Comet &mdash; <em>Coronet</em> &mdash; R. H. Afflerbach, IHYC<br>
+          1950&ndash;1951 &mdash; Records not available<br>
+          1952 &mdash; &ldquo;B&rdquo; Sneakbox &mdash; <em>Wigadore</em> &mdash; Lucy Lewis, MYC<br>
+          1953&ndash;1954 &mdash; Records not available<br>
+          1955 &mdash; Lightning &mdash; <em>Argosy</em> &mdash; George Doseher, IHYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Chance Challenge Cup -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Chance Challenge Cup</h3>
+        <p class="trophy-meta">E Scow Fleet &mdash; Mantoloking Yacht Club Host Race</p>
+        <p class="trophy-desc">The Chance Challenge Cup was awarded to the winner of the E Scow class at Mantoloking Yacht Club&rsquo;s BBYRA race day. Records span 1946 through 1960. Runyon Colie Jr. of MYC won the trophy three times. No races were held during WWII (1942&ndash;1945).</p>
+        <p class="winners-label">Winners (selected records)</p>
+        <div class="winners-list">
+          1942&ndash;1945 &mdash; No Races &mdash; WWII<br>
+          1946 &mdash; <em>Doon IV</em> &mdash; Runyon Colie Jr., MYC<br>
+          1947 &mdash; <em>Alita II</em> M2 &mdash; Morton G. Neff Jr., MYC<br>
+          1948 &mdash; <em>Chimera</em> M13 &mdash; Runyon Colie Jr., MYC<br>
+          1949 &mdash; <em>Soubrette</em> M-2 &mdash; M. E. Neff Jr., MYC<br>
+          1950&ndash;1959 &mdash; Records not available<br>
+          1960 &mdash; <em>Calamity</em> &mdash; Runyon Colie, MYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Frelinghuysen Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Frelinghuysen Trophy</h3>
+        <p class="trophy-meta">Laser / Laser Junior Fleet &mdash; Mantoloking Yacht Club</p>
+        <p class="trophy-desc">The Frelinghuysen Trophy was awarded to the winner of the Laser or Laser Junior class at Mantoloking Yacht Club. Records span 1981 through 1996. Had Brick of IHYC won in both 1986 and 1988.</p>
+        <p class="winners-label">Winners (selected records)</p>
+        <div class="winners-list">
+          1981&ndash;1985 &mdash; Records not available<br>
+          1986 &mdash; Had Brick, IHYC<br>
+          1987 &mdash; Record not available<br>
+          1988 &mdash; Had Brick, IHYC<br>
+          1989&ndash;1991 &mdash; Records not available<br>
+          1992 &mdash; Dave R. Magno, LYC<br>
+          1993&ndash;1995 &mdash; Records not available<br>
+          1996 &mdash; Not scheduled
+        </div>
+      </div>
+    </div>
+
+    <!-- O'Malley Trophy (Laser II) -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>O&rsquo;Malley Trophy</h3>
+        <p class="trophy-meta">Laser II Fleet &mdash; Mantoloking Yacht Club</p>
+        <p class="trophy-desc">The O&rsquo;Malley Trophy was awarded to the winner of the Laser II class at Mantoloking Yacht Club. Records span 1985 through 1996. Jan C. O&rsquo;Malley of MYC was the dominant winner, claiming the trophy six times.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1985 &mdash; Saul C. Janson, OGYC<br>
+          1986 &mdash; Thomas V. Sollas III, BHYC<br>
+          1987 &mdash; Jan C. O&rsquo;Malley, MYC<br>
+          1988 &mdash; Saul C. Janson, OGYC<br>
+          1989 &mdash; Curistain VanDerslice, SPYC<br>
+          1990 &mdash; 206 &mdash; Jan C. O&rsquo;Malley, MYC<br>
+          1991 &mdash; 7584 &mdash; Jenny Nelson, IHYC<br>
+          1992 &mdash; 8815 &mdash; Jan O&rsquo;Malley, MYC<br>
+          1993 &mdash; 6754 &mdash; Stephanie Sayia, SPYC<br>
+          1994 &mdash; 8815 &mdash; Jan O&rsquo;Malley, MYC<br>
+          1995 &mdash; 8815 &mdash; Jan O&rsquo;Malley, MYC<br>
+          1996 &mdash; 7584 &mdash; Andria Cutaio, MYC
+        </div>
+      </div>
+    </div>
+
+    <!-- Carl Ill Memorial Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/ma_carlIll.jpg" alt="Carl Ill Memorial Trophy"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>Carl Ill Memorial Trophy</h3>
+        <p class="trophy-meta">Junior Fleet (various classes) &mdash; Mantoloking Yacht Club</p>
+        <p class="trophy-desc">The silver tray is mounted on a stand built by Philip S. Clarke Jr. using white cedar from Henry Tomlinson&rsquo;s boat <em>Queen Ann</em>, the altar platform of All Saints Church in Bay Head (dating to 1883), and an oak cross-tie from the Point Pleasant&ndash;Bay Head Trolley line (laid 1903, discontinued 1920, tracks removed 1923 &mdash; this piece was dug up in front of Applegate&rsquo;s Hardware in 1972). The silver tray was given in memory of Dr. Carl Ill, a past Commodore of the Mantoloking Yacht Club. The trophy is always raced for by a junior class, spanning Sneakbox (1952&ndash;1967), M-16 (1968&ndash;1976), Laser M (1977&ndash;1979), and Laser Radial (1986&ndash;2001).</p>
+        <p class="winners-label">Winners &mdash; Laser Radial Junior</p>
+        <div class="winners-list">
+          1986 &mdash; Mike Plosica, LYC<br>
+          1987 &mdash; Record not available<br>
+          1988 &mdash; 131589 &mdash; John O&rsquo;Leary, PBYC<br>
+          1989 &mdash; Greg Barow, LYC<br>
+          1990 &mdash; 140539 &mdash; Jonathan D. Zwarg, IHYC<br>
+          1991 &mdash; No Race<br>
+          1992 &mdash; 131447 &mdash; Brian D. Hull, BYC<br>
+          1993 &mdash; 149957 &mdash; Richard Colie, MYC<br>
+          1994 &mdash; 149152 &mdash; Ryan Dunn, MCYC<br>
+          1995 &mdash; 156937 &mdash; Brooke Zwarg, IHYC<br>
+          1996 &mdash; 114345 &mdash; Erika Amon, TRYC<br>
+          1997 &mdash; No Race &mdash; Canceled<br>
+          1998 &mdash; 165118 &mdash; Donovan Marvin, TRYC<br>
+          1999 &mdash; 162528 &mdash; Christine Fehskens, SATC<br>
+          2000 &mdash; 151940 &mdash; Eric Horrocks, LYC<br>
+          2001 &mdash; 169583 &mdash; Jason Fertakos, LYC
+        </div>
+        <p class="winners-label" style="margin-top:12px;">Earlier Records (Sneakbox)</p>
+        <div class="winners-list">
+          1952 &mdash; <em>Argosy</em> &mdash; George Doscher<br>
+          1960 &mdash; <em>Tilt</em> &mdash; Carl Ill VanDuyne, MYC<br>
+          1973 &mdash; Jan O&rsquo;Malley, MYC (Laser M)
+        </div>
+      </div>
+    </div>
+
+    <!-- Yachtsman's Club of Philadelphia Trophy (MYC section) -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/ma_yachtsmans.jpg" alt="Yachtsman's Club of Philadelphia Trophy"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>Yachtsman&rsquo;s Club of Philadelphia Trophy</h3>
+        <p class="trophy-meta">&lsquo;B&rsquo; Sneakbox / Laser &lsquo;M&rsquo; / Laser Radial &mdash; Now held by MYC</p>
+        <p class="trophy-desc">Originally a Lavallette Yacht Club trophy for &lsquo;B&rsquo; Sneakboxes, the Yachtsman&rsquo;s Trophy passed permanently to Mantoloking after Paulding Phelps won it three times (1946&ndash;1948). MYC has continued to race it in the junior class across multiple fleets. Full winners history is shared with the Lavallette section above.</p>
+        <p class="winners-label">Selected Winners (MYC era)</p>
+        <div class="winners-list">
+          1946 &mdash; <em>Fan Tan</em> M15 &mdash; Paulding Phelps, MYC<br>
+          1947 &mdash; <em>Fan Tan</em> M15 &mdash; Paulding Phelps, MYC<br>
+          1948 &mdash; <em>Fan Tan</em> M15 &mdash; Paulding Phelps, MYC<br>
+          1952 &mdash; <em>Hot Air</em> &mdash; Jack Urner, BHYC<br>
+          1986 &mdash; Peter Hurley, MYC (Laser &lsquo;M&rsquo;)<br>
+          1988 &mdash; 131672 &mdash; Peter Wright, MYC (Laser Radial)<br>
+          1992 &mdash; Joseph M. Buczkowski, MCYC
+        </div>
+      </div>
+    </div>
+
+    <!-- J. A. deCamp Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>J. A. deCamp Trophy</h3>
+        <p class="trophy-meta">M Scow Fleet &mdash; Mantoloking Yacht Club (New Fleet)</p>
+        <p class="trophy-desc">The J. A. deCamp Trophy was awarded to the winner of the M Scow fleet at Mantoloking Yacht Club. Only three years are recorded in the archive (1977&ndash;1979). A <a href="https://bbyraarchive.org/trophy/ma_deCampDOG.pdf" target="_blank" rel="noopener">Deed of Gift</a> is available in the archive.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1977 &mdash; No Race &mdash; Afternoon squall<br>
+          1978 &mdash; M Scow &mdash; Record not available<br>
+          1979 &mdash; M Scow &mdash; Record not available
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ METEDECONK YC ════════════════════════════════════════════════ -->
+<section class="club-section" id="mcyc">
+  <div class="club-header"><h2>Metedeconk River Yacht Club</h2><span class="club-abbr">MCYC</span></div>
+  <div class="trophy-cards">
+
+    <!-- Bill Kalning Trophy -->
+    <div class="trophy-card">
+      <div class="trophy-card-photo">
+        <img src="https://bbyraarchive.org/trophy/mc_kalning.jpg" alt="Bill Kalning Trophy"/>
+      </div>
+      <div class="trophy-card-body">
+        <h3>&ldquo;In Memory of William C. Kalning&rdquo; Trophy</h3>
+        <p class="trophy-meta">Lightning Fleet &mdash; Metedeconk River Yacht Club Host Day</p>
+        <p class="trophy-desc">The Bill Kalning Trophy was donated by James G. Carson in 1973 for the winner of the Lightning race on the day Metedeconk River Yacht Club hosts or co-hosts the BBYRA regatta. It honors William C. Kalning for dedicated service to the Barnegat Bay Yacht Racing Association. The trophy is kept at MCYC; a keeper trophy is presented to the winner each year. MCYC sailors dominated throughout, with Paul Gelenitis winning 13 times and Jim Carson winning multiple years.</p>
+        <p class="winners-label">Winners</p>
+        <div class="winners-list">
+          1973 &mdash; 12405 &mdash; Bill Cramer, MCYC<br>
+          1974 &mdash; 11103 &mdash; Alan Ruiter, NBYC<br>
+          1975 &mdash; 11103 &mdash; Alan Ruiter, MCYC<br>
+          1976 &mdash; 12124 &mdash; Alan Ruiter, MCYC<br>
+          1977 &mdash; 12789 &mdash; Charles Thrower, MCYC<br>
+          1978 &mdash; 12499 &mdash; Bob Hutchinson, OGYC<br>
+          1979 &mdash; 13306 &mdash; Don Schon, MCYC<br>
+          1980 &mdash; 13184 &mdash; Jim Carson, MCYC<br>
+          1981 &mdash; 11077 &mdash; Jody Lutz, MCYC<br>
+          1982 &mdash; 13710 &mdash; Jim Gelenitis, MCYC<br>
+          1983 &mdash; 11739 &mdash; Jody Lutz, MCYC<br>
+          1984 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1985 &mdash; 12405 &mdash; Alan Ruiter, MCYC<br>
+          1986 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1987 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1988 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1989 &mdash; 14029 &mdash; Craig Dooren, MCYC<br>
+          1990 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1991 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1992 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+          1993 &mdash; 14595 &mdash; Jim Carson, MCYC<br>
+          1994 &mdash; 14550 &mdash; Chris Arner, MCYC<br>
+          1995 &mdash; 14550 &mdash; Joe Buczkowski, MCYC<br>
+          1996 &mdash; 14684 &mdash; Paul Gelenitis, MCYC<br>
+          1997 &mdash; 11972 &mdash; Matt Reiser, LYC<br>
+          1998 &mdash; 14684 &mdash; Mitch Hnatt, MCYC<br>
+          1999 &mdash; 14684 &mdash; Paul Gelenitis, MCYC<br>
+          2000 &mdash; 14595 &mdash; Mitch Hnatt, MCYC<br>
+          2001 &mdash; No Race<br>
+          2002 &mdash; 14595 &mdash; Mitch Hnatt, MCYC<br>
+          2003 &mdash; 14924 &mdash; Allan Terhune Jr., TRYC<br>
+          2004 &mdash; 14960 &mdash; Mitch Hnatt, MCYC<br>
+          2005 &mdash; 14706 &mdash; Will Demand, TRYC<br>
+          2006 &mdash; Race Abandoned &mdash; Thunderstorm<br>
+          2007 &mdash; 14960 &mdash; Mitch Hnatt, MCYC<br>
+          2008 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2009 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2010 &mdash; <em>Logical</em> 15122 &mdash; Jim Carson, MCYC<br>
+          2011 &mdash; No Entries
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ NORMANDY BEACH YC ════════════════════════════════════════════ -->
+<section class="club-section" id="nbyc">
+  <div class="club-header"><h2>Normandy Beach Yacht Club</h2><span class="club-abbr">NBYC</span></div>
+  <div class="trophy-cards">
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><img src="https://bbyraarchive.org/trophy/nb_phillips.jpg" alt="F.F. Phillips Trophy"/></div>
+      <div class="trophy-card-body">
+        <h3>The F.F. Phillips Trophy</h3>
+        <p class="trophy-meta">Lightning Fleet &mdash; Normandy Beach Yacht Club Host Day</p>
+        <p class="trophy-desc">The Phillips Trophy was the gift of Chauncey and Chara Phillips,
+awarded to the winner of the Lightning class when the BBYRA was sailed at NBYC.
+First awarded in 1957, it was contested through 1999 when the Lightning fleet
+stopped regularly competing at NBYC. By 2012 the Lightning class no longer
+competed in the BBYRA series. MCYC sailors dominated throughout,
+particularly Paul Gelenitis (8 wins) and Jim Carson.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1957 &mdash; 5835 &mdash; John W. Orelup, BHYC<br>
+1958 &mdash; <em>Static</em> 270 &mdash; William E. Schwalje, NBYC<br>
+1959 &mdash; 6884 &mdash; Jim G. Carson, MRYC<br>
+1960 &mdash; 6906 &mdash; R. R. Adams, BHYC<br>
+1961 &mdash; <em>Static</em> 270 &mdash; William E. Schwalje, NBYC<br>
+1962 &mdash; 3587 &mdash; Samuel D. Wyman, BHYC<br>
+1963 &mdash; <em>Static</em> 270 &mdash; William E. Schwalje, NBYC<br>
+1964 &mdash; Record not available<br>
+1965 &mdash; 8958 &mdash; R. R. Adams, BHYC<br>
+1966 &mdash; 8958 &mdash; R. R. Adams, BHYC<br>
+1967 &mdash; 9984 &mdash; Jim G. Carson, MCYC<br>
+1968 &mdash; 10848 &mdash; Jim G. Carson, MCYC<br>
+1969 &mdash; 10848 &mdash; Jim G. Carson, MCYC<br>
+1970 &mdash; 11484 &mdash; Jim G. Carson, MCYC<br>
+1971 &mdash; Record not available<br>
+1972 &mdash; 10926 &mdash; C. H. Thrower, NBYC<br>
+1973 &mdash; 11894 &mdash; Bill Newman, MCYC<br>
+1974 &mdash; 9546 &mdash; David LaPier, NBYC<br>
+1975 &mdash; 12209 &mdash; Dr. Ira S. Ross, LYC<br>
+1976 &mdash; 12789 &mdash; C. H. Thrower, NBYC<br>
+1977 &mdash; 12405 &mdash; Tom Schon, MCYC<br>
+1978 &mdash; 12695 &mdash; Mark Beaton, MCYC<br>
+1979 &mdash; 13184 &mdash; Jim G. Carson, MCYC<br>
+1980 &mdash; 11411 &mdash; Dick Thomas, MCYC<br>
+1981 &mdash; 11411 &mdash; Dick Thomas, MCYC<br>
+1982 &mdash; 13710 &mdash; Jim Gelenitis, MCYC<br>
+1983 &mdash; 13710 &mdash; Brian Taboada, MCYC<br>
+1984 &mdash; 11411 &mdash; Dick Thomas, MCYC<br>
+1985 &mdash; 13710 &mdash; Chris Krautheim, MCYC<br>
+1986 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+1987 &mdash; 12405 &mdash; Alan Ruiter, MCYC<br>
+1988 &mdash; 14029 &mdash; Craig J. Dooren, MCYC<br>
+1989 &mdash; 14029 &mdash; Craig J. Dooren, MCYC<br>
+1990 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+1991 &mdash; 11411 &mdash; Dick Thomas, MCYC<br>
+1992 &mdash; No Race<br>
+1993 &mdash; 13084 &mdash; Paul Gelenitis, MCYC<br>
+1994 &mdash; 14450 &mdash; Paul Gelenitis, MCYC<br>
+1995 &mdash; 13673 &mdash; Matt Reiser, SPYC<br>
+1996 &mdash; 14684 &mdash; Paul Gelenitis, MCYC<br>
+1997 &mdash; 14684 &mdash; Paul Gelenitis, MCYC<br>
+1998 &mdash; 14450 &mdash; Jarrett Lynn, MCYC<br>
+1999 &mdash; 14450 &mdash; Jarrett Lynn, MCYC<br>
+2000&ndash;2008 &mdash; Race Not Scheduled<br>
+2009 &mdash; 15197 &mdash; Matt Reiser, LYC<br>
+2010 &mdash; No Entries<br>
+2011 &mdash; Race Not Scheduled<br>
+2012 &mdash; Fleet No Longer Active</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><img src="https://bbyraarchive.org/trophy/nb_royIsaacs.jpg" alt="Commodore Roy H. Isaacs Trophy"/></div>
+      <div class="trophy-card-body">
+        <h3>Commodore Roy H. Isaacs Trophy</h3>
+        <p class="trophy-meta">Senior Penguin Fleet &mdash; Normandy Beach Yacht Club Host Race</p>
+        <p class="trophy-desc">The Commodore Roy H. Isaacs Trophy was awarded to the winner of the Senior Penguin class on Normandy Beach Yacht Club&rsquo;s BBYRA race day. Records span 1960 through 1980.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1960 &mdash; Bill Newman, MCYC<br>
+1961 &mdash; Hans Bone<br>
+1962 &mdash; Larry Reid<br>
+1963 &mdash; 5704 &mdash; Judy Blunt, NBYC<br>
+1964 &mdash; Record not available<br>
+1965 &mdash; Cathy Hornnidge, BYC<br>
+1966 &mdash; Bob Ludenov, LYC<br>
+1967 &mdash; Will DeCamp, MYC<br>
+1968 &mdash; Joe Ellingham, TRYC<br>
+1969 &mdash; Mike Larsen, BYC<br>
+1970 &mdash; Tom Oksen, BYC<br>
+1971 &mdash; Record not available<br>
+1972 &mdash; Shawn Kempton, OGYC<br>
+1973 &mdash; Kevin Kempton, OGYC<br>
+1974 &mdash; Record not available<br>
+1975 &mdash; Cindy West, BHYC<br>
+1976 &mdash; Saul Cohen<br>
+1977 &mdash; Glen Zimmermann, MCYC<br>
+1978 &mdash; Alan Bannister, BYC<br>
+1979 &mdash; Record not available<br>
+1980 &mdash; Record not available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OCEAN COUNTY CLUB ════════════════════════════════════════════ -->
+<section class="club-section" id="occ">
+  <div class="club-header"><h2>Ocean County College Sailing Club</h2><span class="club-abbr">OCC</span></div>
+  <div class="trophy-cards">
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><img src="https://bbyraarchive.org/trophy/occ_seibert.jpg" alt="The Seibert Cup"/></div>
+      <div class="trophy-card-body">
+        <h3>The Seibert Cup</h3>
+        <p class="trophy-meta">420 Fleet &mdash; Ocean County College Sailing Club &mdash; Fall Season Championship</p>
+        <p class="trophy-desc">The Seibert Cup is awarded to the top skipper and crew of the fall sailing season at Ocean County College. The competition consists of ten races sailed over two days at the end of the season.</p>
+        <p class="winners-label">Winners (Skipper / Crew)</p><div class="winners-list">2004 &mdash; Andrew Groff / Patrice Olszewski<br>
+2005 &mdash; Andrew Groff / Kelly Tooker<br>
+2006 &mdash; Joe Lepis / Declan Reilly<br>
+2007 &mdash; Joe Lepis / Steph Pretty<br>
+2008 &mdash; Holden Muehleisen / Luci Saraceno<br>
+2009 &mdash; Tyler Kennedy / Sarah Salter<br>
+2010 &mdash; Tyler Kennedy / Kristina Severino<br>
+2011 &mdash; Zac Shippe / Andrew Deponte</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OCEAN GATE YC ════════════════════════════════════════════════ -->
+<section class="club-section" id="ogyc">
+  <div class="club-header"><h2>Ocean Gate Yacht Club</h2><span class="club-abbr">OGYC</span></div>
+  <div class="trophy-cards">
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Brit Applegate Trophy</h3>
+        <p class="trophy-meta">A Cat Fleet &mdash; Ocean Gate Yacht Club Old Timers Race</p>
+        <p class="trophy-desc">The Brit Applegate Trophy was awarded to the winner of the Old Timers A Cat race at Ocean Gate Yacht Club. Records cover 1974 through 1976; no winner data is available in the archive.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1974&ndash;1976 &mdash; Records not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><img src="https://bbyraarchive.org/trophy/og_yohn.jpg" alt="Helen Drexel Yohn Trophy"/></div>
+      <div class="trophy-card-body">
+        <h3>Helen Drexel Yohn Trophy</h3>
+        <p class="trophy-meta">Blue Jay / Junior Laser Modified Fleet &mdash; Ocean Gate Yacht Club Host Race</p>
+        <p class="trophy-desc">The Helen Drexel Yohn Trophy was awarded to the winner of the junior class race at Ocean Gate Yacht Club&rsquo;s BBYRA Host Day. Originally sailed in the Junior Laser Modified class (1984&ndash;1988), it was rededicated to the Junior Blue Jay class from 1989 onward.</p>
+        <p class="winners-label">Winners &mdash; Junior Blue Jay</p><div class="winners-list">1989 &mdash; Gerard Kinzel, MCYC<br>
+1990 &mdash; Josh Kohut, TRYC<br>
+1991 &mdash; Stan Schreyer, LYC<br>
+1992 &mdash; Scott A. Whitman, MCYC<br>
+1993 &mdash; Allan Terhune Jr., TRYC<br>
+1994 &mdash; Laura Dunn, BHYC<br>
+1995 &mdash; Katie Foote &amp; Erin McNelly, OGYC<br>
+1996 &mdash; Tom Allison &amp; J. T. Apel, IHYC<br>
+1997 &mdash; Maria Kinzel &amp; Michael Crann, MCYC</div><p class="winners-label" style="margin-top:12px;">Winners &mdash; Junior Laser Modified</p><div class="winners-list">1984 &mdash; Richard Foster, BYC<br>
+1985 &mdash; Jeff Ryan, TRYC<br>
+1986 &mdash; Peter Hurley, MYC<br>
+1987 &mdash; John O&rsquo;Leary, PBYC<br>
+1988 &mdash; Kelly O&rsquo;Leary, PBYC</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Commodore J. Warren Dilworth Memorial Trophy</h3>
+        <p class="trophy-meta">Comet &mdash; Senior Class &mdash; Ocean Gate Yacht Club Host Race</p>
+        <p class="trophy-desc">The Commodore J. Warren Dilworth Memorial Trophy was awarded to the winner of the Senior Comet class at Ocean Gate Yacht Club&rsquo;s BBYRA race day. Records span 1938 through 1968. Three years have newspaper documentation in the archive.</p>
+        <p class="winners-label">Winners (selected records)</p><div class="winners-list">1938 &mdash; <em>Sea Weed</em> 65 &mdash; W. Lynn Hendrickson, MYC<br>
+1939 &mdash; <em>Sea Weed</em> 65 &mdash; W. Lynn Hendrickson, MYC<br>
+1940 &mdash; <em>Little Dipper</em> 85 &mdash; Gilbert F. Nuse, IHYC<br>
+1941 &mdash; <em>Windfall</em> &mdash; James E. McCambridge Jr., SPYC<br>
+1942&ndash;1944 &mdash; No Races &mdash; WWII<br>
+1945 &mdash; No Race &mdash; Weather<br>
+1946 &mdash; <em>Flotsom</em> &mdash; J. M. Earle, MYC<br>
+1947 &mdash; <em>Vandel</em> 2357 &mdash; Stanton W. Davis Jr., LYC<br>
+1948 &mdash; <em>White Magic</em> 2422 &mdash; S. White, MYC<br>
+1949 &mdash; <em>Syrup</em> 3063 &mdash; Edward Braddock, SPYC<br>
+1950 &mdash; Record not available<br>
+1951 &mdash; 3013 &mdash; F. P. Schoettle, MYC<br>
+1952 &mdash; <em>Sad Sam</em> &mdash; Sam Fortenbaugh, BHYC<br>
+1953&ndash;1955 &mdash; Records not available<br>
+1956 &mdash; <em>Argosy</em> &mdash; George Dosher, IHYC<br>
+1957&ndash;1960 &mdash; Records not available<br>
+1961 &mdash; Bill O&rsquo;Connor, BHYC<br>
+1962 &mdash; <em>Ventre A</em> &mdash; Eric Sellix, BHYC<br>
+1963 &mdash; Record not available<br>
+1964 &mdash; John Harkrader, BHYC<br>
+1965&ndash;1968 &mdash; Records not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Ocean Gate Challenge Cup</h3>
+        <p class="trophy-meta">E Sloop Fleet &mdash; Ocean Gate Yacht Club Host Race</p>
+        <p class="trophy-desc">The Ocean Gate Challenge Cup was awarded to the winner of the E Sloop class at Ocean Gate Yacht Club. Only four years are recorded, spanning 1925 through 1928.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1925 &mdash; <em>Konowingo</em> &mdash; Charles Day / Slade Dale, MYC<br>1926&ndash;1927 &mdash; Records not available<br>1928 &mdash; <em>Rascal</em> &mdash; F. W. Thacher, SPYC</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Marple Trophy</h3>
+        <p class="trophy-meta">Junior Penguin Fleet &mdash; Ocean Gate Yacht Club Host Race</p>
+        <p class="trophy-desc">The Marple Trophy was awarded to the winner of the Junior Penguin class at Ocean Gate Yacht Club&rsquo;s BBYRA race day. Records are listed from 1967 through 1980; no winner data is available in the archive.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1967&ndash;1980 &mdash; Records not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>McIntire Trophy</h3>
+        <p class="trophy-meta">Penguin Fleet &mdash; Ocean Gate Yacht Club Regatta</p>
+        <p class="trophy-desc">The McIntire Trophy was awarded to the winner of the Penguin class regatta at Ocean Gate Yacht Club. Only a single year (1975) is recorded in the archive, with no winner data.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1975 &mdash; Record not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>William Snyder Memorial Trophy</h3>
+        <p class="trophy-meta">Sneakbox / Laser Fleet &mdash; Ocean Gate Yacht Club Host Race</p>
+        <p class="trophy-desc">The William Snyder Memorial Trophy was awarded to the winner of the Sneakbox class at Ocean Gate Yacht Club&rsquo;s BBYRA race day. Records span 1975 (Laser) and 1987 through 1992 (Sneakbox). Garrett Sayia of SPYC won in both 1988 and 1992.</p>
+        <p class="winners-label">Winners &mdash; Sneakbox</p><div class="winners-list">1987 &mdash; Record not available<br>
+1988 &mdash; S1 &mdash; Garrett Sayia, SPYC<br>
+1989 &mdash; Steve Tyler, IHYC<br>
+1990&ndash;1991 &mdash; Records not available<br>
+1992 &mdash; <em>Family Feud</em> &mdash; Garret A. Sayia, SPYC</div><p class="winners-label" style="margin-top:12px;">Winners &mdash; Laser</p><div class="winners-list">1975 &mdash; Record not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Lorenz Trophy</h3>
+        <p class="trophy-meta">15ft. Sneakbox Fleet &mdash; Ocean Gate Yacht Club Host Race</p>
+        <p class="trophy-desc">The Lorenz Trophy was awarded to the winner of the 15ft. Sneakbox class at Ocean Gate Yacht Club&rsquo;s BBYRA race day. Records span 1959 through 1964; no winner data is available in the archive.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1959&ndash;1964 &mdash; Records not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Manhassett Trophy</h3>
+        <p class="trophy-meta">Star Fleet &mdash; Ocean Gate Yacht Club Host Race</p>
+        <p class="trophy-desc">The Manhassett Trophy is a perpetual trophy donated by the late H. Ross Turner of Seaside Park,
+one-time proprietor of the Manhassett Hotel, which was destroyed by fire.
+It was awarded to the winner of the Star class race at Ocean Gate Yacht Club.
+Records span 1929 through 1938; only one winner is recorded in the archive.</p>
+        <p class="winners-label">Winners (selected records)</p><div class="winners-list">1929&ndash;1937 &mdash; Records not available<br>1938 &mdash; <em>Sue</em> 672 &mdash; F. T. Brooks, IHYC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SEASIDE PARK YC ══════════════════════════════════════════════ -->
+<section class="club-section" id="spyc">
+  <div class="club-header"><h2>Seaside Park Yacht Club</h2><span class="club-abbr">SPYC</span></div>
+  <div class="trophy-cards">
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Chance Challenge Cup</h3>
+        <p class="trophy-meta">17ft. Catboat Fleet &mdash; Seaside Park Yacht Club Host Race</p>
+        <p class="trophy-desc">The Chance Challenge Cup was awarded to the winner of the 17ft. Catboat class on Seaside Park Yacht Club&rsquo;s BBYRA race day. Records span 1929 through 1960. The Price family of MYC dominated the 1930s, with <em>U. &amp; I.</em> winning four consecutive times. Ed J. O&rsquo;Malley of LYC won three straight years (1949&ndash;1951).</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1929 &mdash; <em>Sand Flea</em> &mdash; J. J. Vail, SPYC<br>
+1930&ndash;1935 &mdash; Records not available<br>
+1936 &mdash; <em>U. &amp; I.</em> &mdash; B. Price, MYC<br>
+1937 &mdash; <em>U. &amp; I.</em> &mdash; William Price, MYC<br>
+1938 &mdash; <em>U. &amp; I.</em> &mdash; Bob &amp; Sue Price, MYC<br>
+1939 &mdash; <em>U. &amp; I.</em> &mdash; William Price, MYC<br>
+1940 &mdash; <em>Step-n-fetchit</em> &mdash; James P. Humphreys, MYC<br>
+1941 &mdash; <em>Step-n-fetchit</em> &mdash; James P. Humphreys, MYC<br>
+1942&ndash;1943 &mdash; Records not available<br>
+1944 &mdash; <em>Sea Puss</em> L18 &mdash; Fred W. Winkelman, LYC<br>
+1945&ndash;1946 &mdash; Records not available<br>
+1947 &mdash; <em>Shawmut</em> L70 &mdash; Raymund L. Drew, LYC<br>
+1948 &mdash; <em>Sea Puss</em> L18 &mdash; S. W. Winkelman, LYC<br>
+1949 &mdash; <em>Barnegat Belle</em> L77 &mdash; Ed J. O&rsquo;Malley Sr., MYC<br>
+1950 &mdash; <em>Barnegat Belle</em> &mdash; Ed J. O&rsquo;Malley, LYC<br>
+1951 &mdash; <em>Barnegat Belle</em> &mdash; Ed J. O&rsquo;Malley, LYC<br>
+1952&ndash;1953 &mdash; Records not available<br>
+1954 &mdash; G. E. Miller, LYC<br>
+1955&ndash;1960 &mdash; Records not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>William Stanger Trophy</h3>
+        <p class="trophy-meta">E Scow Fleet &mdash; Seaside Park Yacht Club Host Race</p>
+        <p class="trophy-desc">The William Stanger Trophy was awarded to the winner of the E Scow class on Seaside Park Yacht Club&rsquo;s BBYRA race day. Records span 1925 through 1949. Britton Chance and the MYC fleet dominated throughout the 1930s and 1940s. No races were held during WWII (1942&ndash;1945).</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1925 &mdash; <em>Konowingo</em> &mdash; Charles Day / Slade Dale, MYC<br>
+1926 &mdash; <em>Viking</em> &mdash; Schofield, IHYC<br>
+1927 &mdash; Record not available<br>
+1928 &mdash; <em>Shadow II</em> &mdash; Colonel Edwin M. Chance, SPYC<br>
+1929 &mdash; Record not available<br>
+1930 &mdash; <em>Sally</em> &mdash; Fred P. Schoettle, IHYC<br>
+1931 &mdash; Record not available<br>
+1932 &mdash; <em>Alouette</em> &mdash; B. Chance, MYC<br>
+1933 &mdash; <em>Hirondelle</em> &mdash; B. Chance, MYC<br>
+1934 &mdash; <em>Alita</em> &mdash; Miss F. Chance, MYC<br>
+1935 &mdash; <em>Alouette</em> &mdash; S. V. Merrick, BHYC<br>
+1936 &mdash; <em>Alouette</em> &mdash; S. V. Merrick, BHYC<br>
+1937 &mdash; <em>Alita II</em> &mdash; Mrs. M. Gibbons-Neff Jr., MYC<br>
+1938 &mdash; <em>Hirondelle</em> &mdash; Henry Chance, MYC<br>
+1939 &mdash; <em>Wind Song</em> &mdash; Sam Merrick, BHYC<br>
+1940 &mdash; <em>Cacouette</em> &mdash; Britton Chance, MYC<br>
+1941 &mdash; <em>Esperanza</em> &mdash; Edmund Ill Jr., MYC<br>
+1942&ndash;1945 &mdash; No Races &mdash; WWII<br>
+1946 &mdash; <em>Wigwam</em> &mdash; L. C. Lewis, MYC<br>
+1947 &mdash; <em>Doon III</em> (M14) &mdash; Runyon Colie Jr., MYC<br>
+1948 &mdash; <em>Wigwam II</em> (M18) &mdash; Cliff Lewis, MYC<br>
+1949 &mdash; Race Cancelled</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><img src="https://bbyraarchive.org/trophy/sp_thacher.jpg" alt="Thacher Cup"/></div>
+      <div class="trophy-card-body">
+        <h3>Thacher Cup</h3>
+        <p class="trophy-meta">17ft. Catboat / Senior Penguin Fleet &mdash; Seaside Park Yacht Club</p>
+        <p class="trophy-desc">The Thacher Cup was presented by Frank W. Thacher on September 5th, 1927, to be sailed annually on Labor Day on the Seaside Park course by junior members of the BBYRA.
+The trophy has an extraordinary history spanning two distinct classes: 17ft. Catboats (1927&ndash;1960)
+and Senior Penguins (1971&ndash;1980). The Winkelman family of LYC won the Catboat class repeatedly
+in the 1940s&ndash;1950s. Murray E. Barton of MYC won the first two Penguin years.</p>
+        <p class="winners-label">Winners &mdash; Senior Penguin (1971&ndash;1980)</p><div class="winners-list">1971 &mdash; 7707 &mdash; M. Moorhouse Jr., MYC<br>
+1972 &mdash; <em>Insider</em> &mdash; Murray E. Barton, MYC<br>
+1972 &mdash; Charles Hutchinson, APP Record<br>
+1973 &mdash; <em>Insider</em> &mdash; Murray E. Barton, MYC<br>
+1974 &mdash; 8960 &mdash; John Harkrader, MRYC<br>
+1975 &mdash; 8896 &mdash; Tay Adams, BHYC<br>
+1976 &mdash; Shawn Kempton, OGYC<br>
+1977 &mdash; <em>Wassail</em> &mdash; Jim Wagner, MCYC<br>
+1978 &mdash; 8839 &mdash; Jim Wagner, MCYC<br>
+1979 &mdash; 8922 &mdash; Bob Zimmermann, MCYC<br>
+1980 &mdash; 9234 &mdash; Charles Hutchinson, SPYC</div><p class="winners-label" style="margin-top:12px;">Winners &mdash; 17ft. Catboat (selected records)</p><div class="winners-list">1927 &mdash; <em>Suds</em> &mdash; William M. Wood, IHYC<br>
+1928 &mdash; <em>Sea Maid</em> &mdash; W. W. Levering, IHYC<br>
+1929 &mdash; <em>Sea Maid</em> &mdash; W. W. Levering, IHYC<br>
+1930 &mdash; <em>Sea Maid</em> &mdash; W. W. Levering, IHYC<br>
+1931 &mdash; <em>Water Witch III</em> &mdash; Martha G. Carson, IHYC<br>
+1932 &mdash; <em>Patrel</em> &mdash; Thomas Debevoise, MYC<br>
+1933 &mdash; <em>U. D.</em> &mdash; Isabel Rest Benkkert, SPYC<br>
+1935 &mdash; <em>Water Witch III</em> &mdash; John T. Carson Jr., IHYC<br>
+1936 &mdash; <em>U. &amp; I.</em> &mdash; Robert M. Price, MYC<br>
+1937 &mdash; <em>U. &amp; I.</em> &mdash; Robert M. Price, MYC<br>
+1938 &mdash; <em>U. &amp; I.</em> &mdash; William O. Price, MYC<br>
+1939 &mdash; <em>Stepi-n-Fetchit</em> &mdash; Larry Runyon, MYC<br>
+1940 &mdash; <em>Sea Maid</em> &mdash; Craig White, SPYC<br>
+1941 &mdash; <em>Shawmut</em> &mdash; Raymond L. Drew, LYC<br>
+1942 &mdash; <em>Sea Puss</em> &mdash; Fredrick W. Winkelman, LYC<br>
+1943 &mdash; <em>Shawmut</em> &mdash; Raymond L. Drew, LYC<br>
+1944 &mdash; <em>Sea Puss</em> &mdash; Fred W. Winkelman, LYC<br>
+1945 &mdash; <em>U. &amp; I.</em> &mdash; D. V. Applegate, LYC<br>
+1946 &mdash; <em>Felix</em> &mdash; Barbara Winkelman, LYC<br>
+1947 &mdash; <em>Sea Puss</em> (L18) &mdash; Fred W. Winkelman, LYC<br>
+1948 &mdash; <em>Felix</em> (L7) &mdash; Patty Winkelman, LYC<br>
+1949 &mdash; <em>Felix</em> &mdash; Fred W. Winkelman, LYC<br>
+1950 &mdash; <em>Barnegat Belle</em> &mdash; E. J. O&rsquo;Malley, LYC<br>
+1951 &mdash; <em>Barnegat Belle</em> &mdash; E. J. O&rsquo;Malley, LYC<br>
+1952 &mdash; <em>Barnegat Belle</em> &mdash; E. J. O&rsquo;Malley, LYC<br>
+1953 &mdash; <em>Zephyr</em> &mdash; E. A. Zybulewski, LYC<br>
+1954 &mdash; <em>Catnip</em> &mdash; R. B. Davis, LYC<br>
+1956 &mdash; <em>Felix</em> &mdash; F. R. Lord, LYC<br>
+1957 &mdash; <em>Frozen Assets</em> &mdash; W. B. Law, LYC<br>
+1958 &mdash; <em>Felix</em> &mdash; F. R. Lord, LYC</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><img src="https://bbyraarchive.org/trophy/sp_davis.jpg" alt="Mike Davis Memorial Trophy"/></div>
+      <div class="trophy-card-body">
+        <h3>Mike Davis Memorial Trophy</h3>
+        <p class="trophy-meta">Penguin Fleet &mdash; Seaside Park Yacht Club Open Regatta</p>
+        <p class="trophy-desc">The Mike Davis Trophy was donated to the Seaside Park Yacht Club by its Junior Membership in 1973,
+in memory of Mike Davis who was tragically killed in a car accident at age 18.
+Mike was an active and very good young Penguin sailor. The regatta was an open three-race series on a Sunday
+during the summer, attracting not only local Bay talent but National and Olympic-caliber sailors.
+The trophy is a half model of Mike&rsquo;s green Penguin.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1973 &mdash; Jim Wagner, MCYC<br>
+1974 &mdash; Bob Martus, Port Washington NY<br>
+1975 &mdash; Terry Kempton, TRYC<br>
+1976 &mdash; Shawn Kempton, OGYC<br>
+1977 &mdash; Gary Knapp, Seawanhaka Corinthian NY<br>
+1978 &mdash; Terry Kempton, TRYC<br>
+1979 &mdash; Terry Kempton, TRYC<br>
+1980 &mdash; Neal Fowler, Sea Cliff NY<br>
+1981 &mdash; Kathy Hall, Richmond County NY<br>
+1982 &mdash; Ed Vienckowski, SPYC<br>
+1983 &mdash; Neal Litman, Richmond County NY<br>
+1984 &mdash; Ed Vienckowski, SPYC<br>
+1985 &mdash; Ed Vienckowski, SPYC<br>
+1986 &mdash; Neal Litman, Richmond County NY<br>
+1987 &mdash; Neal Litman, Richmond County NY<br>
+1988 &mdash; Neal Litman, Richmond County NY<br>
+1989 &mdash; Record not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><img src="https://bbyraarchive.org/trophy/sp_bamberger.jpg" alt="Bamberger Trophy"/></div>
+      <div class="trophy-card-body">
+        <h3>Bamberger Trophy</h3>
+        <p class="trophy-meta">International Star Fleet &mdash; Seaside Park Yacht Club Labor Day Regatta</p>
+        <p class="trophy-desc">Through the kindness of <a href="http://en.wikipedia.org/wiki/Louis_Bamberger" target="_blank" rel="noopener">Louis Bamberger</a>,
+the trophy bearing his name was donated. The Bamberger Series became the biggest intersectional sailing event
+in New Jersey yachting, attracting Stars from Long Island Sound, Chesapeake Bay, Gravesend Bay, Delaware River,
+Ocean City, and even Hawaii. Competed for annually off the Seaside Park Yacht Club over Labor Day.</p>
+        <p class="winners-label">Winners &mdash; Two-Day Series</p><div class="winners-list">1929 &mdash; <em>Iscyra III</em> &mdash; George W. Elder, Western Long Island Sound<br>
+1930 &mdash; <em>Nick Nack</em> &mdash; Chas E. Lucke Jr., Barnegat Bay<br>
+1931 &mdash; <em>Vixen</em> &mdash; F. Slade Dale, Barnegat Bay<br>
+1932 &mdash; <em>Vixen</em> &mdash; F. Slade Dale, Barnegat Bay<br>
+1933 &mdash; <em>Jubilee</em> &mdash; H. B. Atkin, Western Long Island Sound<br>
+1934 &mdash; <em>Fleet Star III</em> &mdash; T. D. Parkman, Gravesend Bay</div><p class="winners-label" style="margin-top:12px;">Winners &mdash; One-Day Race</p><div class="winners-list">1935 &mdash; <em>Jay</em> &mdash; Stanley Ogilvy, New Rochelle YC<br>
+1936 &mdash; Record not available<br>
+1937 &mdash; <em>Elf</em> &mdash; Barbara Lucke<br>
+1938 &mdash; <em>Sue</em> &mdash; F. Thompson Brooks, IHYC<br>
+1939 &mdash; <em>Teaser</em> &mdash; Clifford E. Grover, Newark &amp; SPYC<br>
+1940 &mdash; <em>Teaser</em> 1428 &mdash; Clifford E. Grover, SPYC<br>
+1941 &mdash; <em>Teaser</em> &mdash; Clifford E. Grover, SPYC</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Oliver F. Zurn III Trophy</h3>
+        <p class="trophy-meta">International Star Fleet &mdash; Seaside Park Yacht Club Independence Day Race</p>
+        <p class="trophy-desc">The Oliver F. Zurn III Trophy was awarded to the winner of the Star class race at Seaside Park Yacht Club around the 4th of July. Records span 1938 through 1947. Cliff Grover of SPYC won in both 1940 and 1941. No races were held during WWII (1942&ndash;1944).</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1938 &mdash; <em>Vixen</em> 966 &mdash; Frank T. Lloyd, SPYC<br>
+1939 &mdash; <em>Sue</em> 672 &mdash; F. T. Brooks, IHYC<br>
+1940 &mdash; <em>Teaser</em> 1428 &mdash; Clifford E. Grover, SPYC<br>
+1941 &mdash; <em>Teaser</em> &mdash; Cliff Grover, SPYC<br>
+1942&ndash;1944 &mdash; No Race &mdash; WWII<br>
+1945&ndash;1946 &mdash; Records not available<br>
+1947 &mdash; <em>Starward</em> (14) &mdash; H. B. Woodworth, IHYC</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>International Star Walbud Trophy</h3>
+        <p class="trophy-meta">International Star Fleet &mdash; Seaside Park Yacht Club Host Race</p>
+        <p class="trophy-desc">The International Star Walbud Trophy was awarded to the winner of the Star class host race at Seaside Park Yacht Club. Only a single year is recorded in the archive.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1933 &mdash; <em>Scrab</em> &mdash; O. F. Zurn II, SPYC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SHORE ACRES YC ═══════════════════════════════════════════════ -->
+<section class="club-section" id="sayc">
+  <div class="club-header"><h2>Shore Acres Yacht Club</h2><span class="club-abbr">SAYC</span></div>
+  <div class="trophy-cards">
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Alznauer Trophy</h3>
+        <p class="trophy-meta">E Scow Fleet &mdash; Shore Acres Yacht Club Host Race</p>
+        <p class="trophy-desc">The Alznauer Trophy was awarded to the winner of the E Scow class on Shore Acres Yacht Club&rsquo;s BBYRA race day. Records span 1961 through 1969. Runyon Colie of MYC won three times.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1961 &mdash; <em>Calamity Too</em> M4 &mdash; R. Colie, MYC<br>
+1962 &mdash; Record not available<br>
+1963 &mdash; <em>Calamity</em> M78 &mdash; Peter DeCamp, MYC<br>
+1964 &mdash; <em>Lurus</em> M111 &mdash; D. Loughran, MYC<br>
+1965 &mdash; <em>Calamity Too</em> M4 &mdash; R. Colie, MYC<br>
+1966 &mdash; <em>Calamity Too</em> M4 &mdash; R. Colie, MYC<br>
+1967 &mdash; Record not available<br>
+1968 &mdash; Not Scheduled<br>
+1969 &mdash; Record not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Allsop Trophy</h3>
+        <p class="trophy-meta">G Sloop Fleet &mdash; Shore Acres Yacht Club Host Race</p>
+        <p class="trophy-desc">The Allsop Trophy was awarded to the winner of the G Sloop class on Shore Acres Yacht Club&rsquo;s BBYRA race day. Records span 1947 through 1963. John Wardell of BHYC won six consecutive times (1956&ndash;1962) aboard <em>Blue Mist</em> G3.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1947 &mdash; <em>Narf</em> G20 &mdash; Bob Snyder, TRYC<br>
+1948 &mdash; <em>Narf</em> G20 &mdash; Bob Snyder, TRYC<br>
+1949 &mdash; <em>Barracuda</em> G50 &mdash; Martin Ill, IHYC<br>
+1950&ndash;1954 &mdash; Records not available<br>
+1955 &mdash; Race Canceled<br>
+1956 &mdash; <em>Blue Mist</em> G3 &mdash; John Wardell, BHYC<br>
+1957 &mdash; <em>Blue Mist</em> G3 &mdash; John Wardell, BHYC<br>
+1958 &mdash; <em>Fugitive</em> G12 &mdash; Bill Fortenbaugh, BHYC<br>
+1959 &mdash; <em>Blue Mist</em> G3 &mdash; John Wardell, BHYC<br>
+1960 &mdash; <em>Blue Mist</em> G3 &mdash; John Wardell, BHYC<br>
+1961 &mdash; <em>Blue Mist</em> G3 &mdash; John Wardell, BHYC<br>
+1962 &mdash; <em>Blue Mist</em> G3 &mdash; John Wardell, BHYC<br>
+1963 &mdash; <em>Fugitive</em> G12 &mdash; Bill Fortenbaugh, BHYC</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Virkler Trophy</h3>
+        <p class="trophy-meta">Jet 14 Senior Fleet &mdash; Shore Acres Yacht Club Host Race</p>
+        <p class="trophy-desc">The Virkler Trophy was awarded to the winner of the Senior Jet 14 class on Shore Acres Yacht Club&rsquo;s BBYRA Host Day. Records span 1960 through 1968. Bruce Birkholz of LYC won three consecutive years (1960&ndash;1962).</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1960 &mdash; Bruce Birkholz, LYC<br>
+1961 &mdash; Bruce Birkholz, LYC<br>
+1962 &mdash; Bruce Birkholz, LYC<br>
+1963 &mdash; <em>Blue Heaven</em> 610 &mdash; D. Radcliffe<br>
+1964&ndash;1965 &mdash; Records not available<br>
+1966 &mdash; Donna Tucker, LYC<br>
+1967&ndash;1968 &mdash; Records not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Tomlinson Trophy</h3>
+        <p class="trophy-meta">Jet 14 Junior Fleet &mdash; Shore Acres Yacht Club Host Race</p>
+        <p class="trophy-desc">The Tomlinson Trophy was awarded to the winner of the Junior Jet 14 class on Shore Acres Yacht Club&rsquo;s BBYRA Host Day. Records span 1961 through 1968. The Bonn family of LYC won in 1963 and 1964.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1961 &mdash; Record not available<br>
+1962 &mdash; Dave Radcliffe, LYC<br>
+1963 &mdash; <em>Who Dat</em> 303 &mdash; H. Bonn, LYC<br>
+1964 &mdash; <em>Who Dat II</em> 613 &mdash; J. Bonn, LYC<br>
+1965 &mdash; Record not available<br>
+1966 &mdash; Donna Tucker, LYC<br>
+1967&ndash;1968 &mdash; Records not available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TOMS RIVER YC ════════════════════════════════════════════════ -->
+<section class="club-section" id="tryc">
+  <div class="club-header"><h2>Toms River Yacht Club</h2><span class="club-abbr">TRYC</span></div>
+  <div class="trophy-cards">
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Toms River E Sloop Challenge Trophy</h3>
+        <p class="trophy-meta">E Scow Fleet &mdash; Toms River Yacht Club Host Race</p>
+        <p class="trophy-desc">The Toms River E Sloop Challenge Trophy was awarded to the winner of the E Scow class on Toms River Yacht Club&rsquo;s BBYRA race day. Records are listed from 1976 through 2012; no winner data is available in the archive for any year.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1976&ndash;2012 &mdash; Records not available (37 years)</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Kirk Trophy</h3>
+        <p class="trophy-meta">Flying Dutchman Fleet &mdash; Toms River Yacht Club Host Race</p>
+        <p class="trophy-desc">The Kirk Trophy was awarded to the winner of the Flying Dutchman class on Toms River Yacht Club&rsquo;s BBYRA race day. Records cover 1962 through 1966. Only 1963 has a named winner: John Uhlbrich of LYC.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1962 &mdash; Record not available<br>
+1963 &mdash; John Uhlbrich, LYC<br>
+1964 &mdash; No Race &mdash; Sailors at Regionals<br>
+1965&ndash;1966 &mdash; Records not available</div>
+      </div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-card-photo"><div class="photo-placeholder">&#127942;</div></div>
+      <div class="trophy-card-body">
+        <h3>Barnegat Bay Bowl</h3>
+        <p class="trophy-meta">International 14 Fleet &mdash; Toms River Yacht Club</p>
+        <p class="trophy-desc">The Barnegat Bay Bowl was awarded to the winner of the International 14 class at Toms River Yacht Club. Records cover 1959 through 1965; no winner data is available in the archive.</p>
+        <p class="winners-label">Winners</p><div class="winners-list">1959&ndash;1965 &mdash; Records not available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Copyright &copy; 2026 Barnegat Bay Yacht Racing Association (a 501c3 organization) &mdash; All Rights Reserved.</p>
+  <p><a href="https://bbyra.org/">bbyra.org</a> &nbsp;|&nbsp; <a href="club-trophies.html">Host Day Trophies</a> &nbsp;|&nbsp; <a href="https://bbyraarchive.org/">Trophy Archive</a> &nbsp;|&nbsp; <a href="https://bbyra.org/contact-us">Contact Us</a></p>
+  <ul class="footer-links">
+    <li><a href="https://bbyra.org/a-cat">A Cat</a></li><li><a href="https://bbyra.org/e-scow">E Scow</a></li>
+    <li><a href="https://bbyra.org/ensign">Ensign</a></li><li><a href="https://bbyra.org/flying-scot">Flying Scot</a></li>
+    <li><a href="https://bbyra.org/ilcas-lasers-1">ILCAs (Lasers)</a></li><li><a href="https://bbyra.org/sanderling">Sanderling</a></li>
+    <li><a href="https://bbyra.org/sandpiper">Sandpiper</a></li><li><a href="https://bbyra.org/sneakbox">Sneakbox</a></li>
+    <li><a href="https://bbyra.org/privacy-policy">Privacy Policy</a></li><li><a href="https://bbyra.org/terms-and-conditions">Terms &amp; Conditions</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
